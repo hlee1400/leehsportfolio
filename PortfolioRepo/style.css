@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif, 'GTUltra';
+    line-height: 1.6;
+    /*background-color: #ffffff;*/
+    background: linear-gradient(to bottom, #FF7B4C 30%, white 100%);
+
+    /*purple color: #3a146a*/
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    /* background: #333;
+    
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; */
+
+    background-image: url('Images/skeptic.png');
+    background-size: cover;
+    /* Ensures the image covers the entire header area */
+    background-position: center;
+    /* Centers the image */
+    height: 600px;
+    /*height:400px;*/
+    /* Set the height of the header */
+    color: white;
+    /* Set text color to ensure it is readable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif, 'GTUltra';
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section {
+    padding: 40px 0;
+    /*background-color: #ffffff;*/
+
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    color: #3a146a;
+    font-size: 1.5rem;
+    font-family: 'FroxaSemiBold', 'Times New Roman', 'GTUltra';
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    text-align: center;
+}
+
+.skills-list li {
+    display: inline-block;
+    background: #FF7B4C;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.center-area {
+    width: 400px;
+    /* Adjust the width of the area */
+    height: 50px;
+    /* Adjust the height of the area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid black;*/
+    /* Optional, to visualize the area */
+    margin: 50px auto;
+    /* Optional, centers the area horizontally in the body */
+
+}
+
+
+p {
+    font-size: 20px;
+    text-align: center;
+
+
+}
+
+p3 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', 'Times New Roman', 'GTUltra';
+}
+
+p1 {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'FroxaRegular', 'Times New Roman', 'GTUltra';
+}
+
+p2 {
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', 'GTUltra';
+}
+
+p4 {
+    font-size: 15px;
+    text-align: center;
+
+    font-family: 'Times New Roman', 'GTUltra';
+}
+
+@font-face {
+    font-family: 'GTUltra';
+    /* Choose any name for the font */
+    src: url('Fonts/GT Ultra/GT-Ultra-Median-Regular.otf') format('otf'),
+        url('Fonts/GT Ultra/GT-Ultra-Median-Regular.ttf') format('ttf'),
+        url('Fonts/GT Ultra/GT-Ultra-Median-Regular.woff2') format('woff2'),
+        url('Fonts/GT Ultra/GT-Ultra-Median-Regular.woff') format('woff');
+    /* Add other formats as necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FroxaBold';
+    src: url('Fonts/froxa/FroxaBold-JpW6o.otf') format('opentype');
+
+    /* Add other formats as necessary */
+    /*font-weight: normal;
+    font-style: normal;*/
+}
+
+@font-face {
+    font-family: 'FroxaExtrabold';
+    src: url('Fonts/froxa/FroxaExtrabold-G36jP.otf') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'FroxaMedium';
+    src: url('Fonts/froxa/FroxaMedium-j9RMO.otf') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'FroxaRegular';
+    src: url('Fonts/froxa/FroxaRegular-zrJWw.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FroxaSemiBold';
+    src: url('Fonts/froxa/FroxaSemibold-5yWdZ.otf') format('opentype');
+
+}
+
+
+.arrowImage {
+    width: 100px;
+    height: 100px;
+    /* Adjust the size as needed */
+    display: block;
+    margin: -15px auto 20px auto;
+    /* Centers the image horizontally */
+    padding-bottom: 15px;
+    /* Optional: Adds some space below the image */
+}
+
+.linkedIn_icon {
+    width: 35px;
+    height: 50px;
+    /* Adjust the size as needed */
+    display: block;
+    margin: -15px auto 20px auto;
+    /* Centers the image horizontally */
+    padding-bottom: 15px;
+    /* Optional: Adds some space below the image */
+}
+
+.email_icon {
+    width: 35px;
+    height: 50px;
+    /* Adjust the size as needed */
+    display: block;
+    margin: -15px auto 20px auto;
+    /* Centers the image horizontally */
+    padding-bottom: 15px;
+    /* Optional: Adds some space below the image */
+}
+
+.goodBit {
+    width: 300px;
+    height: 400px;
+    /* Adjust the size as needed */
+    display: block;
+    margin: -15px auto 20px auto;
+    /* Centers the image horizontally */
+    padding-bottom: 15px;
+    /* Optional: Adds some space below the image */
+}
+
+.impactImage {
+    width: 600px;
+    height: 400px;
+    /* Adjust the size as needed */
+    display: block;
+    margin: -15px auto 20px auto;
+    /* Centers the image horizontally */
+
+}
