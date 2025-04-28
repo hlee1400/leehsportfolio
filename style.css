@@ -44,7 +44,7 @@ header {
 header h1 {
     letter-spacing: 2px;
     font-size: 2.5rem;
-    font-family: 'Times New Roman', Times, serif, 'GTUltra';
+    font-family: Arial, 'Times New Roman', Times, serif, 'GTUltra';
 }
 
 nav ul {
@@ -74,7 +74,7 @@ nav ul li a {
     letter-spacing: 5px;
     color: #3a146a;
     font-size: 1.5rem;
-    font-family: 'FroxaSemiBold', 'Times New Roman', 'GTUltra';
+    font-family: Arial, 'GTUltra', 'Times New Roman';
 }
 
 .project-grid {
@@ -150,14 +150,14 @@ p1 {
 p2 {
     font-size: 10px;
     text-align: center;
-    font-family: 'Times New Roman', 'GTUltra';
+    font-family: Arial, 'Times New Roman', 'GTUltra';
 }
 
 p4 {
     font-size: 15px;
     text-align: center;
 
-    font-family: 'Times New Roman', 'GTUltra';
+    font-family: Arial, 'Times New Roman', 'GTUltra';
 }
 
 @font-face {
@@ -207,6 +207,9 @@ p4 {
 
 }
 
+.intro-text {
+    padding: 50px;
+}
 
 .arrowImage {
     width: 100px;

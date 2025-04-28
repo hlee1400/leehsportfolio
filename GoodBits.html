@@ -6,15 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Get Off My Channel Project | HyeSeung Lee</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            background: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #e9e9e9;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+
+        /* Image */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Links */
+        .section a {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .section a:hover {
+            background: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Header Section -->
     <header>
         <div class="container">
-            <h1>Get Off My Channel</h1>
+            <h1>Get Off My Channel!</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -24,69 +158,42 @@
         </div>
     </header>
 
-    <!-- Project Details Section -->
     <section class="section">
         <div class="container">
-            <br><br><br><br>
             <h2>About the Project</h2>
-            <br><br>
             <p>
                 "Get Off My Channel!" is an interactive visual novel developed in the Ren'Py engine, blending vibrant
-                storytelling with dynamic gameplay.
-                <br><br>
-                Players navigate the fast-paced world of streaming, juggling fans,
-                critics, and unexpected events as they strive to grow their channel while managing daily challenges. The
-                game combines humorous dialogue with unique character arcs, making each decision impactful.
-                <br><br>
-                As a
-                developer and artist, I contributed by optimizing gameplay scripts and troubleshooting code to deliver a
-                seamless, engaging experience.
+                storytelling with dynamic gameplay. Players navigate the fast-paced world of streaming, juggling fans,
+                critics, and unexpected events as they strive to grow their channel while managing daily challenges.
             </p>
-            <br><br><br><br>
-            <h2>Features</h2>
-            <br><br>
+
+            <h3>Features</h3>
             <ul>
-
-                <li>
-                    <p>Enjoy a mix of text-based storytelling and gameplay choices, keeping players engaged from start
-                        to
-                        finish.
-                    </p>
-                </li>
+                <li>Text-based storytelling with interactive gameplay choices</li>
+                <li>Humorous and engaging character arcs</li>
+                <li>Optimized gameplay scripts for seamless experience</li>
             </ul>
-            <br><br><br><br>
-            <h2>Technologies Used</h2>
-            <br><br>
+
+            <h3>Technologies Used</h3>
             <ul>
-                <li>
-                    <p>Python</p>
-                </li>
-                <li>
-                    <p>Ren'Py Engine</p>
-                </li>
-
+                <li>Python</li>
+                <li>Ren'Py Engine</li>
             </ul>
-            <br><br><br><br>
-            <h2>Gallery</h2>
-            <br><br>
-            <img src="Images/getOff.jpg" alt="Promotional Flyer" class="goodBit">
-            <!--<br><br><br><br>
-            <h2>GitHub Repository</h2>
-            <p><a href="https://github.com/yourusername/carbonbusters" target="_blank">Carbonbusters GitHub
-                    Repository</a></p>-->
 
-            <br><br><br><br>
-            <h2>Itch.io page</h2>
+            <h3>Gallery</h3>
+            <div class="gallery">
+                <img src="Images/getOff.jpg" alt="Promotional Flyer">
+            </div>
+
+            <h3>Itch.io Page</h3>
             <p><a href="https://goodbits.itch.io/get-off-my-channel" target="_blank">Play Get Off My Channel!</a></p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 HyeSeung Lee. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
