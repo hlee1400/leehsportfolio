@@ -5,439 +5,513 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HyeSeung Lee | Portfolio</title>
+    <title>HyeSeung Lee | Game Developer & Software Engineer</title>
+    <meta name="description" content="Portfolio of HyeSeung Lee (Soon) - Game Developer, Software Engineer, and Web Developer specializing in C#, Python, Godot, and interactive experiences.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- Header Section -->
-    <header>
-        <section id="header" class="section">
-            <!--<div class="container">-->
-
-            <h1>HyeSeung Lee</h1>
-            <p>Game Developer | Software Engineer | Web Developer</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <!--</div>-->
-        </section>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p class="intro-text">Welcome to my favorite place on Earth!</p>
-            <p>
-                I am HyeSeung Lee (I go by the name Soon), a game developer with experience in programming and
-                development.
-            </p>
-            <p>
-                I am passionate about making video games, creating art, and dancing in my free time.
-            </p>
-        </div>
-    </section>
-
-
-    <!-- About Section -->
-    <!--
-    <section id="about" class="section">
-        <div class="container">
-
-            <img src="Images/whiteArrow.png" class="arrowImage">
-            <br><br><br><br>
-            <h2>ABOUT ME</h2>
-
-            <div class="center-area">
-                <p>
-                    <p3>Welcome to my favorite place on Earth!</p3>
-                </p>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Soon.</span>
             </div>
-
-            <p>
-                <p3>I am HyeSeung Lee (I go by the name Soon), a game developer with
-                    experience in programming and development.
-                </p3>
-            </p>
-            <p>
-            </p>
-            <p>
-                <p3>
-                    I am passionate about making video games, creating art and dancing in my free time.
-                </p3>
-            </p>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </section>
--->
-    <!-- Projects Section -->
-    <!--
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>PROJECTS</h2>
-            <br><br>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>IndieCade Climate Jam</h3>
-                    <p4>-Carbonbusters-</p4>
-                    <p>Game Jam collaboration project with a team of programmers, artists, sound producers, and system
-                        designers</p>
-                    <a href="IndieCade.html" target="_self">View Project</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="typing-animation">HyeSeung Lee</span>
+                </h1>
+                <p class="hero-subtitle">Game Developer | Software Engineer | Web Developer</p>
+                <p class="hero-tagline">Crafting interactive experiences and bringing ideas to life through code</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
-                <div class="project">
-                    <h3>IMPACT Grant Project</h3>
-                    <p4>-Increase Social impact Through the Gerber/Hart Library & Archives Website-</p4>
-                    <p>Student-led website redesign for a non profit organization</p>
-                    <a href="Impact.html" target="_self">View Project</a>
-
-                </div>
-                <div class="project">
-                    <h3>Goodbits 2024</h3>
-                    <p>Get Off My Channel!</p>
-                    <a href="GoodBits.html" target="_self">View Project</a>
-
-                </div>
-
-                <div class="project">
-                    <h3>Kaiju Klasher</h3>
-                    <p>Description of the project.</p>
-                    <a href="KaijuKlasher.html" target="_self">View Project</a>
-
-                </div>
-
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll to explore</span>
             </div>
         </div>
     </section>
--->
 
-    <!-- Skills Section -->
-    <!--
-    <br><br>
-    <section id="skills" class="section">
+    <!-- About Section -->
+    <section id="about" class="section about-section">
         <div class="container">
-            <h2>SKILLS</h2>
-            <br><br>
-            <ul class="skills-list">
-
-
-                <li>C++</li>
-                <li>C#</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>Godot</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>UX/UI</li>
-                
-    </ul>
-    </div>
-    </section>
-
-    -->
-    <!-- Contact Section -->
-
-    <!--
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me for any inquiries or just to say hi!</p>
-
-            <div class="contact-info">
-                <ul>
-                    <li>
-                        <img src="Images/email1.png" class="icon" alt="Email Icon">
-                        <span>Email: <a href="mailto:hlee124@depaul.edu">hlee124@depaul.edu</a></span>
-                    </li>
-                    <li>
-                        <a href="http://www.linkedin.com/in/hyeseung-lee-1380a2227" target="_blank">
-                            <img src="Images/linkedIn.png" class="icon" alt="LinkedIn Icon">
-                            <span>Connect on LinkedIn</span>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-subtitle">Welcome to my favorite place on Earth!</div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <p>Hi there! I'm HyeSeung Lee, but everyone calls me <strong>Soon</strong>. I'm a passionate game developer and software engineer with a love for creating interactive experiences that make people smile.</p>
+                    </div>
+                    <div class="about-details">
+                        <p>My journey in development started with a curiosity about how games work behind the scenes. Since then, I've been diving deep into programming languages like <strong>C#</strong>, <strong>Python</strong>, and <strong>C++</strong>, while mastering tools like <strong>Godot</strong> to bring my creative visions to life.</p>
+                        <p>When I'm not coding, you'll find me creating art, dancing, or exploring new technologies. I believe in the power of games and interactive media to connect people and tell meaningful stories.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="8">0</span>
+                            <span class="stat-label">Technologies Mastered</span>
+                        </div>
+                    </div>
+                    <div class="about-buttons">
+                        <a href="documents/HyeSeung_Lee_Resume.pdf" class="btn btn-primary download-resume" download="HyeSeung_Lee_Resume.pdf" target="_blank">
+                            <span>Download Resume</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 15l-4-4h3V7h2v4h3l-4 4z" fill="currentColor"/>
+                                <path d="M3 19h18v2H3v-2z" fill="currentColor"/>
+                            </svg>
                         </a>
-                    </li>
-                </ul>
+                        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="professional-photo">
+                        <img src="Images/professional_photo.jpg" alt="HyeSeung Lee Professional Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <style>
-        /* Contact Section Styling */
-        #contact {
-            text-align: center;
-            padding: 50px 20px;
-        }
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-subtitle">Showcasing my passion for interactive experiences</div>
+            </div>
+            <div class="projects-grid">
+                <!-- Carbonbusters Project -->
+                <div class="project-card" data-project="carbonbusters">
+                    <div class="project-image">
+                        <img src="Images/project_carbonbusters_1.png" alt="Carbonbusters Game Screenshot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="#" class="project-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <polygon points="5,3 19,12 5,21" fill="currentColor"/>
+                                    </svg>
+                                    Play Game
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">IndieCade Climate Jam</div>
+                        <h3 class="project-title">Carbonbusters</h3>
+                        <p class="project-description">A city transformation game focusing on reducing transportation emissions. Built with a collaborative team of programmers, artists, and designers using advanced graph data structures.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Godot</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Graph Data Structures</span>
+                            <span class="tech-tag">Game Design</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="detail">
+                                <span class="detail-label">Role:</span>
+                                <span class="detail-value">Programmer & Project Manager</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">Team Size:</span>
+                                <span class="detail-value">12 members</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">2 months</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        #contact h2 {
-            font-size: 26px;
-            color: #444;
-            margin-bottom: 15px;
-        }
+                <!-- Get Off My Channel Project -->
+                <div class="project-card" data-project="goodbits">
+                    <div class="project-image">
+                        <img src="Images/getOff.jpg" alt="Get Off My Channel Visual Novel">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                    itch.io
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">GoodBits 2024</div>
+                        <h3 class="project-title">Get Off My Channel!</h3>
+                        <p class="project-description">An interactive visual novel exploring the streaming world through engaging storytelling and character development. Built with Python and the Ren'Py engine for immersive narrative experiences.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Ren'Py Engine</span>
+                            <span class="tech-tag">Visual Novel</span>
+                            <span class="tech-tag">Storytelling</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="detail">
+                                <span class="detail-label">Role:</span>
+                                <span class="detail-value">Programmer & Artist</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">Team Size:</span>
+                                <span class="detail-value">18 members</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">3 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        #contact p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+                <!-- Library Website Project -->
+                <div class="project-card" data-project="impact">
+                    <div class="project-image">
+                        <img src="Images/impact1.JPG" alt="Gerber Hart Library Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2"/>
+                                        <polyline points="15,3 21,3 21,9" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                    View Site
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">IMPACT Grant</div>
+                        <h3 class="project-title">Gerber/Hart Library Website</h3>
+                        <p class="project-description">Complete website redesign for the LGBTQ+ library to increase community engagement and donations. Modern, accessible design with improved user experience and content management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">UX/UI Design</span>
+                        </div>
+                        <div class="project-details">
+                            <div class="detail">
+                                <span class="detail-label">Role:</span>
+                                <span class="detail-value">Lead Developer & Designer</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">Team Size:</span>
+                                <span class="detail-value">5 members</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">Duration:</span>
+                                <span class="detail-value">3 months</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .contact-info ul {
-            list-style: none;
-            padding: 0;
-        }
+    <!-- Development Process Section -->
+    <section id="skills" class="section workflow-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">From Idea to Reality</h2>
+                <div class="section-subtitle">My development process and the technologies that bring concepts to life</div>
+            </div>
+            
+            <div class="workflow-container">
+                <div class="workflow-stage" data-stage="concept">
+                    <div class="stage-number">01</div>
+                    <div class="stage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="stage-content">
+                        <h3 class="stage-title">Concept</h3>
+                        <p class="stage-description">Every project starts with understanding the problem and envisioning the solution</p>
+                        <div class="stage-technologies">
+                            <div class="tech-item">Research</div>
+                            <div class="tech-item">User Stories</div>
+                            <div class="tech-item">Problem Analysis</div>
+                        </div>
+                    </div>
+                    <div class="stage-examples">
+                        <div class="example-item">🌍 Climate action through gaming</div>
+                        <div class="example-item">🏛️ LGBTQ+ community engagement</div>
+                        <div class="example-item">🎮 Interactive storytelling</div>
+                    </div>
+                </div>
 
-        .contact-info li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-            font-size: 18px;
-            background: #e9e9e9;
-            padding: 12px;
-            border-radius: 8px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
 
-        .contact-info img.icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 12px;
-        }
+                <div class="workflow-stage" data-stage="design">
+                    <div class="stage-number">02</div>
+                    <div class="stage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="stage-content">
+                        <h3 class="stage-title">Design</h3>
+                        <p class="stage-description">Architecting user experiences and system structures that solve real problems</p>
+                        <div class="stage-technologies">
+                            <div class="tech-item">UX/UI Design</div>
+                            <div class="tech-item">System Architecture</div>
+                            <div class="tech-item">Wireframing</div>
+                        </div>
+                    </div>
+                    <div class="stage-examples">
+                        <div class="example-item">🎨 Game mechanics for behavior change</div>
+                        <div class="example-item">📐 Accessible library interface</div>
+                        <div class="example-item">🖼️ Visual novel flow design</div>
+                    </div>
+                </div>
 
-        .contact-info a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #f39c12;
-            transition: color 0.3s ease;
-        }
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
 
-        .contact-info a:hover {
-            color: #e67e22;
-        }
-    </style>
+                <div class="workflow-stage" data-stage="code">
+                    <div class="stage-number">03</div>
+                    <div class="stage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="stage-content">
+                        <h3 class="stage-title">Code</h3>
+                        <p class="stage-description">Bringing designs to life with clean, efficient, and scalable code</p>
+                        <div class="stage-technologies">
+                            <div class="tech-item">C#</div>
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">Godot Engine</div>
+                            <div class="tech-item">HTML/CSS</div>
+                            <div class="tech-item">JavaScript</div>
+                        </div>
+                    </div>
+                    <div class="stage-examples">
+                        <div class="example-item">⚡ Graph algorithms for city simulation</div>
+                        <div class="example-item">🐍 Ren'Py scripting for narratives</div>
+                        <div class="example-item">🌐 Responsive web development</div>
+                    </div>
+                </div>
 
--->
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+
+                <div class="workflow-stage" data-stage="test">
+                    <div class="stage-number">04</div>
+                    <div class="stage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="stage-content">
+                        <h3 class="stage-title">Test</h3>
+                        <p class="stage-description">Ensuring quality through rigorous testing and user feedback integration</p>
+                        <div class="stage-technologies">
+                            <div class="tech-item">User Testing</div>
+                            <div class="tech-item">Debugging</div>
+                            <div class="tech-item">Performance Analysis</div>
+                        </div>
+                    </div>
+                    <div class="stage-examples">
+                        <div class="example-item">🎯 Game balance testing</div>
+                        <div class="example-item">♿ Accessibility validation</div>
+                        <div class="example-item">📊 Performance optimization</div>
+                    </div>
+                </div>
+
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+
+                <div class="workflow-stage" data-stage="deploy">
+                    <div class="stage-number">05</div>
+                    <div class="stage-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 11l5-5m0 0l5 5m-5-5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="stage-content">
+                        <h3 class="stage-title">Deploy</h3>
+                        <p class="stage-description">Launching solutions that make a real impact in the world</p>
+                        <div class="stage-technologies">
+                            <div class="tech-item">Version Control</div>
+                            <div class="tech-item">Project Management</div>
+                            <div class="tech-item">Launch Strategy</div>
+                        </div>
+                    </div>
+                    <div class="stage-examples">
+                        <div class="example-item">🚀 IndieCade game submission</div>
+                        <div class="example-item">💝 Increased library donations</div>
+                        <div class="example-item">🎭 Interactive story experiences</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-impact">
+                <div class="impact-title">Real Impact</div>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="impact-number">3</div>
+                        <div class="impact-label">Major Projects</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-number">35+</div>
+                        <div class="impact-label">Team Members Collaborated</div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="impact-number">1000s</div>
+                        <div class="impact-label">Users Impacted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="section-subtitle">Ready to bring your next project to life?</div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>leehs001024@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p><a href="http://www.linkedin.com/in/hyeseung-lee-1380a2227" target="_blank">Connect with me</a></p>
+                        </div>
+                    </div>
+                    <div class="availability-status">
+                        <div class="status-indicator"></div>
+                        <span>Available for new opportunities</span>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-loader"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <!--
-    <footer>
-        <p>&copy; 2024 HyeSeung Lee. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 HyeSeung Lee. All rights reserved.</p>
+                    <p>Built with passion and lots of coffee ☕</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Back to Top</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 
-</html> 
-
-
--->
-
-
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>IndieCade Climate Jam</h3>
-                    <p class="project-subtitle">Carbonbusters</p>
-                    <p>A game jam collaboration with programmers, artists, sound producers, and system designers.</p>
-                    <a href="IndieCade.html" target="_self">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>IMPACT Grant Project</h3>
-                    <p class="project-subtitle">Gerber/Hart Library & Archives Website</p>
-                    <p>Student-led website redesign for a non-profit organization.</p>
-                    <a href="Impact.html" target="_self">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>GoodBits 2024</h3>
-                    <p class="project-subtitle">Get Off My Channel!</p>
-                    <p>An interactive visual novel developed with Ren'Py.</p>
-                    <a href="GoodBits.html" target="_self">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>C++</li>
-                <li>C#</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>Godot</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>UX/UI</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me for any inquiries or just to say hi!</p>
-            <div class="contact-info">
-                <ul>
-                    <li>
-                        <img src="Images/email1.png" class="icon" alt="Email Icon">
-                        <span>Email: <a href="mailto:hlee124@depaul.edu">leehs001024@gmail.com</a></span>
-                    </li>
-                    <li>
-                        <a href="http://www.linkedin.com/in/hyeseung-lee-1380a2227" target="_blank">
-                            <img src="Images/linkedIn.png" class="icon" alt="LinkedIn Icon">
-                            <span>Connect on LinkedIn</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 HyeSeung Lee. All rights reserved.</p>
-    </footer>
-
-    <style>
-        /* General Section Styling */
-        .section {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font-size: 26px;
-            color: #444;
-            margin-bottom: 15px;
-        }
-
-        .intro-text {
-            font-size: 20px;
-            font-weight: 600;
-            color: #f39c12;
-        }
-
-        /* Projects Section */
-        .project-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .project {
-            background: #e9e9e9;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 300px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-subtitle {
-            font-weight: 600;
-            color: #f39c12;
-        }
-
-        .project a {
-            display: inline-block;
-            background: #f39c12;
-            color: white;
-            padding: 10px 15px;
-            margin-top: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-
-        .project a:hover {
-            background: #e67e22;
-        }
-
-        /* Skills Section */
-        .skills-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .skills-list li {
-            background: #e9e9e9;
-            padding: 12px;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-
-        /* Contact Section */
-        .contact-info ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .contact-info li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-            font-size: 18px;
-            background: #e9e9e9;
-            padding: 12px;
-            border-radius: 8px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info img.icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 12px;
-        }
-
-        .contact-info a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #f39c12;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: #e67e22;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: none;
-            color: #444;
-            font-size: 14px;
-            margin-top: 30px;
-        }
-    </style>
+</html>
