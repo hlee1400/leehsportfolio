@@ -988,7 +988,10 @@ function initializeInteractiveRoadmap() {
         const containerHeight = containerRect.height;
         const shouldShowAbove = relativeTop > containerHeight / 2;
         
-        if (shouldShowAbove) {
+        // Special case: always show deploy stage popup on top
+        if (stageName === 'deploy') {
+            stageDetails.classList.add('position-top');
+        } else if (shouldShowAbove) {
             stageDetails.classList.add('position-top');
         } else {
             stageDetails.classList.add('position-bottom');
