@@ -937,6 +937,10 @@ function initializeInteractiveRoadmap() {
         const data = stageData[stageName];
         if (!data) return;
         
+        // Find the active stage element
+        const activeStage = document.querySelector(`[data-stage="${stageName}"]`);
+        if (!activeStage) return;
+        
         // Update content
         document.getElementById('detailsTitle').textContent = data.title;
         document.getElementById('detailsDescription').textContent = data.description;
@@ -961,8 +965,43 @@ function initializeInteractiveRoadmap() {
             exampleList.appendChild(div);
         });
         
+        // Position popup relative to the stage circle
+        positionPopup(activeStage);
+        
         // Show details popup
         stageDetails.classList.add('show');
+    }
+    
+    function positionPopup(stageElement) {
+        // Get stage position
+        const stageRect = stageElement.getBoundingClientRect();
+        const containerRect = stageElement.closest('.roadmap-container').getBoundingClientRect();
+        
+        // Calculate relative position within the container
+        const relativeTop = stageRect.top - containerRect.top;
+        const relativeLeft = stageRect.left - containerRect.left + (stageRect.width / 2);
+        
+        // Clear previous positioning classes
+        stageDetails.classList.remove('position-top', 'position-bottom');
+        
+        // Determine if popup should appear above or below based on stage position
+        const containerHeight = containerRect.height;
+        const shouldShowAbove = relativeTop > containerHeight / 2;
+        
+        if (shouldShowAbove) {
+            stageDetails.classList.add('position-top');
+        } else {
+            stageDetails.classList.add('position-bottom');
+        }
+        
+        // Position the popup
+        stageDetails.style.left = relativeLeft + 'px';
+        
+        if (shouldShowAbove) {
+            stageDetails.style.top = relativeTop + 'px';
+        } else {
+            stageDetails.style.top = (relativeTop + 100) + 'px'; // 100px is stage circle height
+        }
     }
     
     function hideStageDetails() {

@@ -1184,10 +1184,8 @@ body {
 /* Stage Details Popup */
 .stage-details {
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    width: 400px;
+    width: 350px;
     max-width: 90%;
     background: var(--white);
     border-radius: var(--radius-2xl);
@@ -1196,11 +1194,55 @@ body {
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     border: 2px solid var(--primary-orange);
+    pointer-events: none;
 }
 
 .stage-details.show {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
+    pointer-events: all;
+}
+
+/* Position popup above or below stage circles */
+.stage-details.position-top {
+    top: -20px;
+    transform: translate(-50%, -100%) scale(0);
+}
+
+.stage-details.position-top.show {
+    transform: translate(-50%, -100%) scale(1);
+}
+
+.stage-details.position-bottom {
+    top: calc(100% + 20px);
+    transform: translate(-50%, 0%) scale(0);
+}
+
+.stage-details.position-bottom.show {
+    transform: translate(-50%, 0%) scale(1);
+}
+
+/* Add a pointer/arrow to indicate which stage the popup belongs to */
+.stage-details::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stage-details.position-top::before {
+    bottom: -10px;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--primary-orange) transparent transparent transparent;
+}
+
+.stage-details.position-bottom::before {
+    top: -10px;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent var(--primary-orange) transparent;
 }
 
 .details-content {
@@ -1325,12 +1367,21 @@ body {
     }
     
     .stage-details {
-        width: 350px;
+        width: 320px;
+        max-width: 95%;
     }
     
     .character-avatar {
         width: 40px;
         height: 40px;
+    }
+    
+    .details-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .details-title {
+        font-size: var(--font-size-lg);
     }
 }
 
