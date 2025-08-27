@@ -1056,12 +1056,12 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     overflow: hidden;
-    min-height: 600px;
+    min-height: 800px;
 }
 
 .roadmap-container {
     position: relative;
-    height: 500px;
+    height: 700px;
     max-width: 1000px;
     margin: 0 auto;
     border-radius: var(--radius-2xl);
