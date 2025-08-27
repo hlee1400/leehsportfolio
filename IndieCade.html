@@ -5,244 +5,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Carbonbusters Project | HyeSeung Lee</title>
+    <title>Carbonbusters | HyeSeung Lee</title>
+    <meta name="description" content="City transformation game focusing on reducing transportation emissions - developed by HyeSeung Lee for IndieCade Climate Jam 2024">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* General Styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Header */
-        header {
-            background: #222;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 10px 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #f39c12;
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 26px;
-            margin-bottom: 15px;
-            color: #444;
-        }
-
-        .section p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .section h3 {
-            font-size: 22px;
-            margin-top: 20px;
-            color: #555;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #e9e9e9;
-            margin: 8px 0;
-            padding: 12px;
-            border-radius: 5px;
-            font-size: 17px;
-        }
-
-        /* Image Gallery */
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .gallery img {
-            width: 90%;
-            max-width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Links */
-        .section a {
-            display: inline-block;
-            background: #f39c12;
-            color: white;
-            padding: 10px 20px;
-            margin-top: 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-
-        .section a:hover {
-            background: #e67e22;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #222;
-            color: white;
-            font-size: 14px;
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>Carbonbusters</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <style>
-        /* Header Styling */
-        header {
-            background: none;
-            /* Removes the black background */
-            color: #333;
-            /* Darker text for better contrast */
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 10px 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #f39c12;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #e67e22;
-        }
-    </style>
-
-    <!-- Project Details Section -->
-    <section class="section">
-        <div class="container">
-            <h2>About the Project</h2>
-            <p>
-                Carbonbusters is a game created during the IndieCade Climate Jam. It focuses on transforming a
-                car-dependent city by reducing transportation emissions and gaining political support to implement
-                sustainable infrastructure changes, from adding bike lanes to replacing highways with rail lines.
-            </p>
-
-            <h3>Features</h3>
-            <ul>
-                <li>City transformation through political and infrastructural changes</li>
-                <li>Various transportation modes and their impact on emissions</li>
-                <li>Agent-based pathfinding between different infrastructure nodes</li>
-                <li>Real-time feedback on the city's environmental impact</li>
-            </ul>
-
-            <h3>Technologies Used</h3>
-            <ul>
-                <li>Godot (C#)</li>
-                <li>Graph data structures for pathfinding</li>
-                <li>Emissions management system</li>
-            </ul>
-
-            <h3>Gallery</h3>
-            <div class="gallery">
-                <img src="Images/project_carbonbusters_1.png" alt="Carbonbusters Screenshot 1">
-                <img src="Images/project_carbonbusters_2.png" alt="Carbonbusters Screenshot 2">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="color: inherit; text-decoration: none;">
+                    <span>Soon.</span>
+                </a>
             </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">← Back to Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#projects" class="nav-link">All Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-            <h3>GitHub Repository</h3>
-            <p><a href="https://github.com/computeruser-dev/IndieCade-Climate-Jam-2024" target="_blank">Carbonbusters GitHub
-                    Repository</a></p>
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-overlay"></div>
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-category">IndieCade Climate Jam 2024</div>
+                <h1 class="project-hero-title">Carbonbusters</h1>
+                <p class="project-hero-subtitle">City Transformation Game for Climate Action</p>
+                <div class="project-hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Godot C#</span>
+                        <span class="stat-label">Tech Stack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h3>Play the Game</h3>
-            <p><a href="https://computeruser.itch.io/carbonbusters" target="_blank">Play Carbonbusters</a></p>
+    <!-- Project Overview -->
+    <section class="section project-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="section-subtitle">Building sustainable cities through gameplay</div>
+            </div>
+            <div class="project-content-grid">
+                <div class="project-description">
+                    <p class="lead-text">
+                        Carbonbusters is an innovative city transformation game developed for the IndieCade Climate Jam, where players tackle the challenge of reducing transportation emissions while gaining political support for sustainable infrastructure changes.
+                    </p>
+                    <p>
+                        The game empowers players to transform car-dependent cities by implementing progressive changes—from adding bike lanes to replacing highways with efficient rail systems. Through strategic decision-making and resource management, players experience the real-world complexities of urban planning and environmental policy.
+                    </p>
+                    <p>
+                        Built with advanced graph data structures for realistic pathfinding and agent-based systems, Carbonbusters demonstrates how gaming can effectively communicate complex environmental challenges while providing an engaging and educational experience.
+                    </p>
+                </div>
+                <div class="project-image-showcase">
+                    <img src="Images/project_carbonbusters_1.png" alt="Carbonbusters Game Screenshot showing city transformation" class="showcase-image">
+                    <p class="image-caption">Interactive city view showing transportation infrastructure and emissions data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section project-features">
+        <div class="container">
+            <h2 class="section-title">Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="7.5,4.21 12,6.81 16.5,4.21" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="7.5,19.79 7.5,14.6 3,12" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="21,12 16.5,14.6 16.5,19.79" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="12,22.81 12,17" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>City Transformation</h3>
+                    <p>Complete urban planning system allowing players to redesign cities with sustainable transportation infrastructure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="m12 9-7-7 7 7 7-7-7 7zm0 6 7 7-7-7-7 7 7-7z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Pathfinding</h3>
+                    <p>Sophisticated graph data structures enable realistic agent-based navigation between infrastructure nodes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3v18h18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Impact</h3>
+                    <p>Dynamic feedback system showing immediate environmental impact of infrastructure decisions and policy changes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Political Strategy</h3>
+                    <p>Engage with citizens and gain political support to implement progressive environmental policies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Challenges -->
+    <section class="section project-challenges">
+        <div class="container">
+            <h2 class="section-title">Technical Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-item">
+                    <h3>Graph Algorithm Optimization</h3>
+                    <p>Implementing efficient pathfinding algorithms to handle complex transportation networks with hundreds of interconnected nodes while maintaining smooth gameplay performance.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Agent-Based Modeling</h3>
+                    <p>Creating realistic citizen behavior patterns that respond dynamically to infrastructure changes and policy decisions in real-time.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Data Visualization</h3>
+                    <p>Designing intuitive visual representations of complex environmental data to help players understand the impact of their decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="section project-tech">
+        <div class="container">
+            <h2 class="section-title">Technologies & Tools</h2>
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h3>Game Development</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">Godot Engine</span>
+                        <span class="tech-tag">C#</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Data Structures</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">Graph Algorithms</span>
+                        <span class="tech-tag">Pathfinding Systems</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Game Systems</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">Emissions Management</span>
+                        <span class="tech-tag">Agent-Based Modeling</span>
+                        <span class="tech-tag">Real-Time Analytics</span>
+                        <span class="tech-tag">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="section project-gallery">
+        <div class="container">
+            <h2 class="section-title">Game Screenshots</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Images/project_carbonbusters_1.png" alt="Carbonbusters main gameplay view" class="gallery-image">
+                    <p class="gallery-caption">Main city view showing transportation infrastructure and citizen movement patterns</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Images/project_carbonbusters_2.png" alt="Carbonbusters policy interface" class="gallery-image">
+                    <p class="gallery-caption">Policy implementation interface with real-time environmental impact metrics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Links -->
+    <section class="section project-links">
+        <div class="container">
+            <h2 class="section-title">Play & Explore</h2>
+            <div class="project-actions">
+                <a href="https://computeruser.itch.io/carbonbusters" target="_blank" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <polygon points="5,3 19,12 5,21" fill="currentColor"/>
+                    </svg>
+                    Play Carbonbusters
+                </a>
+                <a href="https://github.com/computeruser-dev/IndieCade-Climate-Jam-2024" target="_blank" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    View Source Code
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 HyeSeung Lee. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 HyeSeung Lee. All rights reserved.</p>
+                    <p>Built with passion and lots of coffee ☕</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Back to Portfolio</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
