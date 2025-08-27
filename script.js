@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTypewriterEffect();
     initializeScrollIndicator();
     initializeSmoothScrolling();
+    initializeProjectCardClicks();
 });
 
 // ===========================
@@ -744,6 +745,45 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
+// ===========================
+// Project Card Click Navigation
+// ===========================
+function initializeProjectCardClicks() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    // Define the mapping between project data attributes and their corresponding pages
+    const projectPages = {
+        'carbonbusters': 'IndieCade.html',
+        'goodbits': 'GoodBits.html',
+        'impact': 'Impact.html'
+    };
+    
+    projectCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Prevent navigation if clicking on project links
+            if (e.target.closest('.project-link')) {
+                return;
+            }
+            
+            const projectType = this.getAttribute('data-project');
+            const targetPage = projectPages[projectType];
+            
+            if (targetPage) {
+                window.location.href = targetPage;
+            }
+        });
+        
+        // Add visual feedback for clickable cards
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = this.style.transform.replace('translateY(-10px)', '') + ' translateY(-15px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = this.style.transform.replace('translateY(-15px)', '');
+        });
+    });
+}
 
 // ===========================
 // Debug Console Info
