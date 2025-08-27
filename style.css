@@ -1056,14 +1056,14 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     overflow: hidden;
-    min-height: 1000px;
-    padding: 80px 0;
+    min-height: 1200px;
+    padding: 100px 0;
 }
 
 .roadmap-container {
     position: relative;
-    height: 800px;
-    max-width: 1200px;
+    height: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     border-radius: var(--radius-2xl);
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -1088,14 +1088,14 @@ body {
 }
 
 .character-avatar {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 32px rgba(255, 123, 76, 0.4);
-    border: 3px solid var(--white);
+    border: 2px solid var(--white);
     animation: characterPulse 2s ease-in-out infinite;
     overflow: hidden;
 }
