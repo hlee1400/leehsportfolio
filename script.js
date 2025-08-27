@@ -966,13 +966,13 @@ function initializeInteractiveRoadmap() {
         });
         
         // Position popup relative to the stage circle
-        positionPopup(activeStage);
+        positionPopup(activeStage, stageName);
         
         // Show details popup
         stageDetails.classList.add('show');
     }
     
-    function positionPopup(stageElement) {
+    function positionPopup(stageElement, stageName) {
         // Get stage position
         const stageRect = stageElement.getBoundingClientRect();
         const containerRect = stageElement.closest('.roadmap-container').getBoundingClientRect();
