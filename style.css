@@ -1056,14 +1056,18 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     overflow: hidden;
-    min-height: 1200px;
+    min-height: 2400px;
     padding: 100px 0;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .roadmap-container {
     position: relative;
-    height: 1000px;
-    max-width: 1400px;
+    height: 2000px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
     border-radius: var(--radius-2xl);
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
