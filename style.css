@@ -1049,6 +1049,292 @@ body {
 }
 
 /* ===========================
+   Interactive Roadmap Section
+   =========================== */
+.roadmap-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    overflow: hidden;
+    min-height: 600px;
+}
+
+.roadmap-container {
+    position: relative;
+    height: 500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: var(--radius-2xl);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 2px solid var(--glass-border);
+    overflow: hidden;
+}
+
+/* Draggable Character */
+.roadmap-character {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+
+.roadmap-character:active {
+    cursor: grabbing;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.character-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-orange), #ff9068);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    box-shadow: 0 8px 32px rgba(255, 123, 76, 0.4);
+    border: 3px solid var(--white);
+    animation: characterPulse 2s ease-in-out infinite;
+}
+
+@keyframes characterPulse {
+    0%, 100% { 
+        box-shadow: 0 8px 32px rgba(255, 123, 76, 0.4);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 12px 40px rgba(255, 123, 76, 0.6);
+        transform: scale(1.05);
+    }
+}
+
+/* Roadmap Path */
+.roadmap-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Stage Circles */
+.roadmap-stages {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.roadmap-stage {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.stage-circle {
+    width: 100px;
+    height: 100px;
+    background: var(--white);
+    border: 4px solid var(--primary-orange);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.stage-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 48px rgba(255, 123, 76, 0.3);
+    border-color: #ff6b47;
+}
+
+.stage-circle.active {
+    background: var(--primary-orange);
+    color: var(--white);
+    transform: scale(1.2);
+    animation: stageActivate 0.6s ease-out;
+}
+
+@keyframes stageActivate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1.2); }
+}
+
+.stage-label {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stage-circle.active .stage-label {
+    color: var(--white);
+}
+
+/* Stage Details Popup */
+.stage-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 400px;
+    max-width: 90%;
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 2px solid var(--primary-orange);
+}
+
+.stage-details.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.details-content {
+    padding: var(--spacing-2xl);
+    position: relative;
+}
+
+.details-close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: none;
+    border: none;
+    font-size: var(--font-size-2xl);
+    color: var(--text-secondary);
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.details-close:hover {
+    background: var(--light-gray);
+    color: var(--text-primary);
+}
+
+.details-header {
+    margin-bottom: var(--spacing-lg);
+    padding-right: var(--spacing-2xl);
+}
+
+.details-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.details-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.details-body {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.details-technologies h4,
+.details-examples h4 {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.tech-list .tech-tag {
+    background: var(--primary-orange);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+}
+
+.example-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.example-list .example-item {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    padding: var(--spacing-xs) 0;
+    border-left: 3px solid var(--primary-orange);
+    padding-left: var(--spacing-sm);
+}
+
+/* Instructions */
+.roadmap-instructions {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-lg);
+    background: var(--glass-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+}
+
+.roadmap-instructions p {
+    font-size: var(--font-size-md);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Responsive Design for Roadmap */
+@media (max-width: 768px) {
+    .roadmap-container {
+        height: 400px;
+    }
+    
+    .stage-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .stage-label {
+        font-size: var(--font-size-xs);
+    }
+    
+    .stage-details {
+        width: 350px;
+    }
+    
+    .character-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ===========================
    Contact Section
    =========================== */
 .contact-section {

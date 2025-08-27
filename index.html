@@ -254,153 +254,92 @@
         </div>
     </section>
 
-    <!-- Development Process Section -->
-    <section id="skills" class="section workflow-section">
+    <!-- Interactive Roadmap Section -->
+    <section id="skills" class="section roadmap-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">From Idea to Reality</h2>
-                <div class="section-subtitle">My development process and the technologies that bring concepts to life</div>
+                <h2 class="section-title">Development Journey</h2>
+                <div class="section-subtitle">Drag the character to explore my development process</div>
             </div>
             
-            <div class="workflow-container">
-                <div class="workflow-stage" data-stage="concept">
-                    <div class="stage-number">01</div>
-                    <div class="stage-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <div class="roadmap-container">
+                <!-- Draggable Character -->
+                <div class="roadmap-character" id="roadmapCharacter">
+                    <div class="character-avatar">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="4" fill="currentColor"/>
+                            <path d="M20 19v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <div class="stage-content">
-                        <h3 class="stage-title">Concept</h3>
-                        <p class="stage-description">Every project starts with understanding the problem and envisioning the solution</p>
-                        <div class="stage-technologies">
-                            <div class="tech-item">Research</div>
-                            <div class="tech-item">User Stories</div>
-                            <div class="tech-item">Problem Analysis</div>
+                </div>
+
+                <!-- Roadmap Path -->
+                <svg class="roadmap-path" viewBox="0 0 800 400">
+                    <path d="M100 200 Q200 100 300 200 Q400 300 500 200 Q600 100 700 200" 
+                          stroke="var(--primary-orange)" stroke-width="4" fill="none" stroke-dasharray="10,5" opacity="0.6"/>
+                </svg>
+
+                <!-- Stage Circles -->
+                <div class="roadmap-stages">
+                    <div class="roadmap-stage" data-stage="concept" style="left: 8%; top: 45%;">
+                        <div class="stage-circle">
+                            <span class="stage-label">Concept</span>
                         </div>
                     </div>
-                    <div class="stage-examples">
-                        <div class="example-item">🌍 Climate action through gaming</div>
-                        <div class="example-item">🏛️ LGBTQ+ community engagement</div>
-                        <div class="example-item">🎮 Interactive storytelling</div>
-                    </div>
-                </div>
 
-                <div class="workflow-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-
-                <div class="workflow-stage" data-stage="design">
-                    <div class="stage-number">02</div>
-                    <div class="stage-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stage-content">
-                        <h3 class="stage-title">Design</h3>
-                        <p class="stage-description">Architecting user experiences and system structures that solve real problems</p>
-                        <div class="stage-technologies">
-                            <div class="tech-item">UX/UI Design</div>
-                            <div class="tech-item">System Architecture</div>
-                            <div class="tech-item">Wireframing</div>
+                    <div class="roadmap-stage" data-stage="design" style="left: 25%; top: 20%;">
+                        <div class="stage-circle">
+                            <span class="stage-label">Design</span>
                         </div>
                     </div>
-                    <div class="stage-examples">
-                        <div class="example-item">🎨 Game mechanics for behavior change</div>
-                        <div class="example-item">📐 Accessible library interface</div>
-                        <div class="example-item">🖼️ Visual novel flow design</div>
-                    </div>
-                </div>
 
-                <div class="workflow-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-
-                <div class="workflow-stage" data-stage="code">
-                    <div class="stage-number">03</div>
-                    <div class="stage-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stage-content">
-                        <h3 class="stage-title">Code</h3>
-                        <p class="stage-description">Bringing designs to life with clean, efficient, and scalable code</p>
-                        <div class="stage-technologies">
-                            <div class="tech-item">C#</div>
-                            <div class="tech-item">Python</div>
-                            <div class="tech-item">Godot Engine</div>
-                            <div class="tech-item">HTML/CSS</div>
-                            <div class="tech-item">JavaScript</div>
+                    <div class="roadmap-stage" data-stage="code" style="left: 50%; top: 45%;">
+                        <div class="stage-circle">
+                            <span class="stage-label">Code</span>
                         </div>
                     </div>
-                    <div class="stage-examples">
-                        <div class="example-item">⚡ Graph algorithms for city simulation</div>
-                        <div class="example-item">🐍 Ren'Py scripting for narratives</div>
-                        <div class="example-item">🌐 Responsive web development</div>
-                    </div>
-                </div>
 
-                <div class="workflow-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-
-                <div class="workflow-stage" data-stage="test">
-                    <div class="stage-number">04</div>
-                    <div class="stage-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stage-content">
-                        <h3 class="stage-title">Test</h3>
-                        <p class="stage-description">Ensuring quality through rigorous testing and user feedback integration</p>
-                        <div class="stage-technologies">
-                            <div class="tech-item">User Testing</div>
-                            <div class="tech-item">Debugging</div>
-                            <div class="tech-item">Performance Analysis</div>
+                    <div class="roadmap-stage" data-stage="test" style="left: 75%; top: 70%;">
+                        <div class="stage-circle">
+                            <span class="stage-label">Test</span>
                         </div>
                     </div>
-                    <div class="stage-examples">
-                        <div class="example-item">🎯 Game balance testing</div>
-                        <div class="example-item">♿ Accessibility validation</div>
-                        <div class="example-item">📊 Performance optimization</div>
-                    </div>
-                </div>
 
-                <div class="workflow-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-
-                <div class="workflow-stage" data-stage="deploy">
-                    <div class="stage-number">05</div>
-                    <div class="stage-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path d="M7 11l5-5m0 0l5 5m-5-5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div class="stage-content">
-                        <h3 class="stage-title">Deploy</h3>
-                        <p class="stage-description">Launching solutions that make a real impact in the world</p>
-                        <div class="stage-technologies">
-                            <div class="tech-item">Version Control</div>
-                            <div class="tech-item">Project Management</div>
-                            <div class="tech-item">Launch Strategy</div>
+                    <div class="roadmap-stage" data-stage="deploy" style="left: 90%; top: 45%;">
+                        <div class="stage-circle">
+                            <span class="stage-label">Deploy</span>
                         </div>
                     </div>
-                    <div class="stage-examples">
-                        <div class="example-item">🚀 IndieCade game submission</div>
-                        <div class="example-item">💝 Increased library donations</div>
-                        <div class="example-item">🎭 Interactive story experiences</div>
+                </div>
+
+                <!-- Stage Details (Hidden by default) -->
+                <div class="stage-details" id="stageDetails">
+                    <div class="details-content">
+                        <button class="details-close" id="detailsClose">&times;</button>
+                        <div class="details-header">
+                            <h3 class="details-title" id="detailsTitle">Stage Title</h3>
+                            <p class="details-description" id="detailsDescription">Stage description</p>
+                        </div>
+                        <div class="details-body">
+                            <div class="details-technologies">
+                                <h4>Tools & Technologies</h4>
+                                <div class="tech-list" id="techList"></div>
+                            </div>
+                            <div class="details-examples">
+                                <h4>Real Examples</h4>
+                                <div class="example-list" id="exampleList"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Instructions -->
+            <div class="roadmap-instructions">
+                <p>🎮 <strong>Interactive Experience:</strong> Drag the character to different stages to discover my development process!</p>
+            </div>
+
+            <!-- Impact Stats -->
             <div class="workflow-impact">
                 <div class="impact-title">Real Impact</div>
                 <div class="impact-stats">

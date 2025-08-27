@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollIndicator();
     initializeSmoothScrolling();
     initializeProjectCardClicks();
+    initializeInteractiveRoadmap();
 });
 
 // ===========================
@@ -782,6 +783,216 @@ function initializeProjectCardClicks() {
         card.addEventListener('mouseleave', function() {
             this.style.transform = this.style.transform.replace('translateY(-15px)', '');
         });
+    });
+}
+
+// ===========================
+// Interactive Roadmap
+// ===========================
+function initializeInteractiveRoadmap() {
+    const character = document.getElementById('roadmapCharacter');
+    const stages = document.querySelectorAll('.roadmap-stage');
+    const stageDetails = document.getElementById('stageDetails');
+    const detailsClose = document.getElementById('detailsClose');
+    
+    if (!character || !stages.length || !stageDetails) return;
+    
+    // Stage data
+    const stageData = {
+        concept: {
+            title: 'Concept',
+            description: 'Every project starts with understanding the problem and envisioning the solution',
+            technologies: ['Research', 'User Stories', 'Problem Analysis'],
+            examples: [
+                '🌍 Climate action through gaming',
+                '🏛️ LGBTQ+ community engagement', 
+                '🎮 Interactive storytelling'
+            ]
+        },
+        design: {
+            title: 'Design',
+            description: 'Architecting user experiences and system structures that solve real problems',
+            technologies: ['UX/UI Design', 'System Architecture', 'Wireframing'],
+            examples: [
+                '🎨 Game mechanics for behavior change',
+                '📐 Accessible library interface',
+                '🖼️ Visual novel flow design'
+            ]
+        },
+        code: {
+            title: 'Code',
+            description: 'Bringing designs to life with clean, efficient, and scalable code',
+            technologies: ['C#', 'Python', 'Godot Engine', 'HTML/CSS', 'JavaScript'],
+            examples: [
+                '⚡ Graph algorithms for city simulation',
+                '🐍 Ren\'Py scripting for narratives',
+                '🌐 Responsive web development'
+            ]
+        },
+        test: {
+            title: 'Test',
+            description: 'Ensuring quality through rigorous testing and user feedback integration',
+            technologies: ['User Testing', 'Debugging', 'Performance Analysis'],
+            examples: [
+                '🎯 Game balance testing',
+                '♿ Accessibility validation',
+                '📊 Performance optimization'
+            ]
+        },
+        deploy: {
+            title: 'Deploy',
+            description: 'Launching solutions that make a real impact in the world',
+            technologies: ['Version Control', 'Project Management', 'Launch Strategy'],
+            examples: [
+                '🚀 IndieCade game submission',
+                '💝 Increased library donations',
+                '🎭 Interactive story experiences'
+            ]
+        }
+    };
+    
+    let isDragging = false;
+    let currentStage = null;
+    
+    // Drag functionality
+    character.addEventListener('mousedown', startDrag);
+    character.addEventListener('touchstart', startDrag);
+    
+    function startDrag(e) {
+        isDragging = true;
+        character.style.transition = 'none';
+        
+        const moveHandler = (e) => {
+            if (!isDragging) return;
+            
+            const clientX = e.clientX || e.touches[0].clientX;
+            const clientY = e.clientY || e.touches[0].clientY;
+            const containerRect = character.parentElement.getBoundingClientRect();
+            
+            const x = clientX - containerRect.left - 24; // Half character width
+            const y = clientY - containerRect.top - 24; // Half character height
+            
+            // Keep character within bounds
+            const maxX = containerRect.width - 48;
+            const maxY = containerRect.height - 48;
+            
+            character.style.left = Math.max(0, Math.min(x, maxX)) + 'px';
+            character.style.top = Math.max(0, Math.min(y, maxY)) + 'px';
+            character.style.transform = 'none';
+            
+            // Check for stage collision
+            checkStageCollision(clientX, clientY);
+        };
+        
+        const endHandler = () => {
+            isDragging = false;
+            character.style.transition = 'all 0.3s ease';
+            document.removeEventListener('mousemove', moveHandler);
+            document.removeEventListener('mouseup', endHandler);
+            document.removeEventListener('touchmove', moveHandler);
+            document.removeEventListener('touchend', endHandler);
+        };
+        
+        document.addEventListener('mousemove', moveHandler);
+        document.addEventListener('mouseup', endHandler);
+        document.addEventListener('touchmove', moveHandler);
+        document.addEventListener('touchend', endHandler);
+        
+        e.preventDefault();
+    }
+    
+    function checkStageCollision(mouseX, mouseY) {
+        stages.forEach(stage => {
+            const stageRect = stage.getBoundingClientRect();
+            const stageCenterX = stageRect.left + stageRect.width / 2;
+            const stageCenterY = stageRect.top + stageRect.height / 2;
+            
+            const distance = Math.sqrt(
+                Math.pow(mouseX - stageCenterX, 2) + Math.pow(mouseY - stageCenterY, 2)
+            );
+            
+            const circle = stage.querySelector('.stage-circle');
+            if (distance < 60) { // Collision threshold
+                if (currentStage !== stage) {
+                    // Remove active class from all stages
+                    stages.forEach(s => s.querySelector('.stage-circle').classList.remove('active'));
+                    
+                    // Add active class to current stage
+                    circle.classList.add('active');
+                    currentStage = stage;
+                    
+                    // Show stage details
+                    showStageDetails(stage.dataset.stage);
+                }
+            } else {
+                circle.classList.remove('active');
+                if (currentStage === stage) {
+                    currentStage = null;
+                }
+            }
+        });
+    }
+    
+    function showStageDetails(stageName) {
+        const data = stageData[stageName];
+        if (!data) return;
+        
+        // Update content
+        document.getElementById('detailsTitle').textContent = data.title;
+        document.getElementById('detailsDescription').textContent = data.description;
+        
+        // Update technologies
+        const techList = document.getElementById('techList');
+        techList.innerHTML = '';
+        data.technologies.forEach(tech => {
+            const span = document.createElement('span');
+            span.className = 'tech-tag';
+            span.textContent = tech;
+            techList.appendChild(span);
+        });
+        
+        // Update examples
+        const exampleList = document.getElementById('exampleList');
+        exampleList.innerHTML = '';
+        data.examples.forEach(example => {
+            const div = document.createElement('div');
+            div.className = 'example-item';
+            div.textContent = example;
+            exampleList.appendChild(div);
+        });
+        
+        // Show details popup
+        stageDetails.classList.add('show');
+    }
+    
+    function hideStageDetails() {
+        stageDetails.classList.remove('show');
+        stages.forEach(s => s.querySelector('.stage-circle').classList.remove('active'));
+        currentStage = null;
+    }
+    
+    // Close button functionality
+    detailsClose.addEventListener('click', hideStageDetails);
+    
+    // Click outside to close
+    stageDetails.addEventListener('click', (e) => {
+        if (e.target === stageDetails) {
+            hideStageDetails();
+        }
+    });
+    
+    // Stage click functionality (alternative to drag)
+    stages.forEach(stage => {
+        stage.addEventListener('click', () => {
+            showStageDetails(stage.dataset.stage);
+        });
+    });
+    
+    // ESC key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            hideStageDetails();
+        }
     });
 }
 
