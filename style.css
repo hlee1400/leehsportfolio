@@ -1135,20 +1135,24 @@ body {
 
 /* Stage Circles */
 .roadmap-stages {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
     z-index: 5;
 }
 
 .roadmap-stage {
-    position: absolute;
-    transform: translate(-50%, -50%);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .stage-circle {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     background: var(--white);
     border: 4px solid var(--primary-orange);
     border-radius: var(--radius-full);
