@@ -1140,14 +1140,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 10px;
+    gap: 20px;
     z-index: 5;
-}
-
-.concept-stage {
-    position: absolute;
-    left: -350px;
-    top: -320px;
 }
 
 .roadmap-stage {
