@@ -1070,7 +1070,7 @@ body {
     max-width: none;
     margin: 0 auto;
     border-radius: var(--radius-2xl);
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: url('Images/grass.gif') center/cover no-repeat;
     border: 2px solid var(--glass-border);
     overflow: hidden;
 }
