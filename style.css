@@ -1146,8 +1146,8 @@ body {
 
 .concept-stage {
     position: absolute;
-    left: 0px;
-    top: -70px;
+    left: -350px;
+    top: -320px;
 }
 
 .roadmap-stage {
