@@ -1065,7 +1065,7 @@ body {
 
 .roadmap-container {
     position: relative;
-    height: 1000px;
+    height: 700px;
     width: 100%;
     max-width: none;
     margin: 0 auto;
@@ -1142,6 +1142,12 @@ body {
     display: flex;
     gap: 10px;
     z-index: 5;
+}
+
+.concept-stage {
+    position: absolute;
+    left: 0px;
+    top: -70px;
 }
 
 .roadmap-stage {
