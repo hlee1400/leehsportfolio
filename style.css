@@ -588,11 +588,11 @@ body {
 }
 
 .about-details p:first-child {
-    border-left-color: #3B82F6;
+    border-left-color: transparent;
 }
 
 .about-details p:last-child {
-    border-left-color: #10B981;
+    border-left-color: transparent;
 }
 
 .about-details p::before {
@@ -610,11 +610,11 @@ body {
 }
 
 .about-details p:first-child::before {
-    background: #3B82F6;
+    background: transparent;
 }
 
 .about-details p:last-child::before {
-    background: #10B981;
+    background: transparent;
 }
 
 .about-details p:hover {
@@ -1249,7 +1249,7 @@ body {
 
 .roadmap-container {
     position: relative;
-    height: 1500px;
+    height: 1300px;
     width: 100%;
     max-width: none;
     margin: 0 auto;
@@ -1335,7 +1335,7 @@ body {
 }
 
 .concept-stage {
-    transform: translateY(5px);
+    transform: translateY(-50px) translateX(5px);
 }
 
 .roadmap-stage[data-stage="design"] {
@@ -1425,6 +1425,15 @@ body {
 }
 
 .stage-details.position-top.show {
+    transform: translate(-50%, -100%) scale(1);
+}
+
+/* Special positioning for deploy stage popup to avoid blocking the square */
+.roadmap-stage[data-stage="deploy"] .stage-details.position-top {
+    top: -80px;
+}
+
+.roadmap-stage[data-stage="deploy"] .stage-details.position-top.show {
     transform: translate(-50%, -100%) scale(1);
 }
 
