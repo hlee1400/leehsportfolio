@@ -974,7 +974,7 @@ body {
 .workflow-impact {
     text-align: center;
     margin-top: var(--spacing-4xl);
-    padding: var(--spacing-3xl) var(--spacing-2xl);
+    padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-lg) var(--spacing-2xl);
     background: var(--glass-bg);
     backdrop-filter: var(--glass-backdrop);
     -webkit-backdrop-filter: var(--glass-backdrop);
@@ -1140,7 +1140,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 40px;
+    gap: 150px;
     z-index: 5;
 }
 
@@ -1148,6 +1148,18 @@ body {
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.concept-stage {
+    transform: translateY(-50px);
+}
+
+.roadmap-stage[data-stage="code"] {
+    transform: translateY(25px);
+}
+
+.roadmap-stage[data-stage="deploy"] {
+    transform: translateY(-50px);
 }
 
 .stage-circle {
