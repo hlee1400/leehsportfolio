@@ -1140,7 +1140,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 150px;
+    gap: 50px;
     z-index: 5;
 }
 
@@ -1151,7 +1151,11 @@ body {
 }
 
 .concept-stage {
-    transform: translateY(-50px);
+    transform: translateY(5px);
+}
+
+.roadmap-stage[data-stage="design"] {
+    transform: translateY(-5px);
 }
 
 .roadmap-stage[data-stage="code"] {
