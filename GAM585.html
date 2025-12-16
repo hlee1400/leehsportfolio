@@ -60,6 +60,75 @@
         </div>
     </section>
 
+    <!-- Interactive Model Viewer -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Animation Clips</h2>
+
+            <!-- Controls -->
+            <div class="model-controls">
+                <label for="clipSelect">Animation:</label>
+
+                <select id="clipSelect">
+                    <option value="Models/walk_mesh.glb">Walk</option>
+                    <option value="Models/runRM+mesh.glb">Run</option>
+                    <option value="Models/sidestep_rightRM+mesh.glb">Sidestep</option>
+                    <option value="Models/shot_front+mesh.glb">Shot</option>
+                    <option value="Models/hit_front+mesh.glb">Hit</option>
+                    <option value="Models/die_right+mesh.glb">Die</option>
+                </select>
+
+                <button id="playPauseBtn" type="button" class="btn btn-primary">Play</button>
+            </div>
+
+            <!-- Model Viewer -->
+            <model-viewer id="mv" class="model-viewer" src="Models/walk_mesh.glb" alt="3D character animation preview"
+                camera-controls shadow-intensity="1" environment-image="neutral" exposure="1"
+                style="background: transparent;">
+            </model-viewer>
+
+
+            <p class="muted">
+                Drag to rotate the character. Use the dropdown to switch animation clips.
+            </p>
+        </div>
+    </section>
+
+    <!-- Model Viewer Library -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+    <!-- Clip Switching + Playback Logic -->
+    <script>
+        const mv = document.getElementById("mv");
+        const clipSelect = document.getElementById("clipSelect");
+        const btn = document.getElementById("playPauseBtn");
+
+        // Switch animation file when dropdown changes
+        clipSelect.addEventListener("change", () => {
+            mv.pause();
+            btn.textContent = "Play";
+            mv.src = clipSelect.value;
+        });
+
+        // Play / Pause animation
+        btn.addEventListener("click", async () => {
+            await mv.updateComplete;
+
+            if (mv.paused) {
+                mv.play();
+                btn.textContent = "Pause";
+            } else {
+                mv.pause();
+                btn.textContent = "Play";
+            }
+        });
+    </script>
+
+
+
+
+
     <!-- Project Overview -->
     <section class="section project-overview">
         <div class="container">
@@ -97,7 +166,7 @@
                 <div class="project-image-showcase">
                     <img src="Images/GAM585.png" alt="Animation runtime playback showing skeleton animation controls"
                         class="showcase-image">
-                    <p class="image-caption">Runtime playback: playing 5 different clips at the same time, seperately
+                    <p class="image-caption">Playing 5 different clips at the same time, separately
                     </p>
                 </div>
             </div>
