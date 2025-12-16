@@ -2599,7 +2599,9 @@ textarea:focus {
 
 .model-viewer {
     width: 100%;
-    height: 520px;
+    /* Ensure consistent sizing across environments */
+    height: clamp(420px, 60vh, 720px);
+    min-height: 420px;
     border-radius: 16px;
     background-color: #ffffff;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
