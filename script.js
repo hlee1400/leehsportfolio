@@ -28,11 +28,13 @@ function initializeNavigation() {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Navbar scroll effect
+    // Navbar scroll effect - hidden at top, visible after scrolling
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
+            navbar.classList.add('visible');
             navbar.classList.add('scrolled');
         } else {
+            navbar.classList.remove('visible');
             navbar.classList.remove('scrolled');
         }
     });

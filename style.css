@@ -132,6 +132,15 @@ body {
     -webkit-backdrop-filter: var(--glass-backdrop);
     border-bottom: 1px solid var(--glass-border);
     transition: all var(--transition-normal);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .navbar.scrolled {
