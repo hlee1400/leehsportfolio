@@ -1,508 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HyeSeung Lee | Game Developer & Software Engineer</title>
-    <meta name="description"
-        content="Portfolio of HyeSeung Lee (Soon) - Game Developer, Software Engineer, and Web Developer specializing in C#, Python, Godot, and interactive experiences.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soon — Minimal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>Soon.</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#hero" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+
+  <!-- ======= HEADER / NAV ======= -->
+  <header class="header">
+    <div class="header__logo">Soon</div>
+    <nav class="header__nav">
+      <span class="header__nav-label">Quick Links</span>
+      <div class="header__nav-links">
+        <a href="#home">Home</a>,
+        <a href="#work">Work</a>,
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
+    <div class="header__location">
+      <span class="header__location-city">Based in Chicago 芝加哥</span>
+      <span class="header__location-role">Creative Tech Dev</span>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="typing-animation">HyeSeung Lee</span>
-                </h1>
-                <p class="hero-subtitle">Game Developer | Software Engineer | Web Developer</p>
-                <p class="hero-tagline">Crafting interactive experiences and bringing ideas to life through code</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow"></div>
-                <span>Scroll to explore</span>
-            </div>
+  <!-- ======= HERO SECTION ======= -->
+  <section id="home" class="hero">
+    <div class="hero__content">
+      <div class="hero__text">
+        <h1 class="hero__heading">
+          Creative mind meets tech<br/>Inspired by connections<br/><span class="hero__jp">创想未来</span><br/>Unapologetically myself
+        </h1>
+      </div>
+      <div class="hero__image">
+        <video src="assets/deli.mp4" autoplay muted loop playsinline></video>
+        <div class="hero__image-overlay">
+          <span>너라는<br/>위대함을<br/>믿어</span>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-subtitle">A Space for Building, Breaking, and Learning</div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-intro">
-                        <p>Ever since I first wondered how games worked behind the scenes, I've been on a journey to
-                            create them myself. I'm <strong>HyeSeung Lee</strong>, a developer and engineer who blends
-                            technical skill with creativity
-                            to bring ideas to life.
-                        </p>
-                    </div>
-                    <div class="about-details">
-                        <p>I work primarily with <strong>C++</strong>, <strong>C#</strong>, and <strong>Python</strong>,
-                            and I love building with <strong>Godot</strong>. From core gameplay systems to backend
-                            engine development, my focus is always on crafting experiences that adapt.</p>
-                        <p>Outside of coding, I explore art, and I'm constantly curious about new
-                            technologies. For me, software engineering isn't just a career — it's a way to share
-                            stories, emotions, and joy with others.</p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number" data-target="3">0</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-target="10">0</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-target="8">0</span>
-                            <span class="stat-label">Technologies Mastered</span>
-                        </div>
-                    </div>
-                    <div class="about-buttons">
-                        <a href="documents/HyeSeung_Lee_Resume.pdf" class="btn btn-primary download-resume"
-                            download="HyeSeung_Lee_Resume.pdf" target="_blank">
-                            <span>Download Resume</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 15l-4-4h3V7h2v4h3l-4 4z" fill="currentColor" />
-                                <path d="M3 19h18v2H3v-2z" fill="currentColor" />
-                            </svg>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="professional-photo">
-                        <img src="Images/professional_photo.jpg" alt="HyeSeung Lee Professional Photo" loading="lazy">
-                    </div>
-                </div>
-            </div>
+    <!-- Services Row -->
+    <div class="hero__services">
+      <div class="hero__service-item">Software</div>
+      <div class="hero__service-item">Game</div>
+      <div class="hero__service-item">Web</div>
+
+    </div>
+
+  </section>
+
+  <!-- ======= NAME BANNER ======= -->
+  <section class="name-banner">
+    <h2 class="name-banner__text">HyeSeung<span class="tm">LEE</span></h2>
+  </section>
+
+  <!-- ======= ABOUT SECTION ======= -->
+  <section id="gallery" class="about">
+    <div class="about__image">
+      <img src="assets/professional_photo.jpg" alt="Portrait" />
+    </div>
+    <div class="about__content">
+      <p class="about__text">
+        <span class="about__years">3 years</span> of building software and building vision, combining disciplined engineering with artistic thinking.
+      </p>
+      <a href="contact.html" class="btn btn--outline">CONTACT</a>
+
+      <div class="about__roles">
+        <div class="about__role">
+          <span class="about__role-line"></span>
+          <span class="about__role-text">Backend Software Engineer</span>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="section-subtitle">Showcasing my passion for interactive experiences</div>
-            </div>
-            <div class="projects-grid">
-                <!-- Carbonbusters Project -->
-                <div class="project-card" data-project="carbonbusters">
-                    <div class="project-image">
-                        <img src="Images/project_carbonbusters_1.png" alt="Carbonbusters Game Screenshot">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/computeruser-dev/IndieCade-Climate-Jam-2024"
-                                    class="project-link" target="_blank">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                                            stroke="currentColor" stroke-width="2" />
-                                    </svg>
-                                    GitHub
-                                </a>
-                                <a href="https://computeruser.itch.io/carbonbusters" class="project-link"
-                                    target="_blank">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <polygon points="5,3 19,12 5,21" fill="currentColor" />
-                                    </svg>
-                                    Play Game
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">IndieCade Climate Jam</div>
-                        <h3 class="project-title">Carbonbusters</h3>
-                        <p class="project-description">A city transformation game focusing on reducing transportation
-                            emissions. Built with a collaborative team of programmers, artists, and designers using
-                            advanced graph data structures.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Godot</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">Graph Data Structures</span>
-                            <span class="tech-tag">Game Design</span>
-                        </div>
-                        <div class="project-details">
-                            <div class="detail">
-                                <span class="detail-label">Role:</span>
-                                <span class="detail-value">Programmer & Project Manager</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label">Team Size:</span>
-                                <span class="detail-value">12 members</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label">Duration:</span>
-                                <span class="detail-value">2 months</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GAM585 Project -->
-                <div class="project-card" data-project="GAM585">
-                    <div class="project-image">
-                        <img src="Images/GAM585.png" alt="GAM585 Screenshot">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">SE 585: Real-Time Software Development II </div>
-                        <h3 class="project-title">Animation Converter & Runtime Playback System</h3>
-                        <p class="project-description">A school project</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">Protobuf</span>
-                            <span class="tech-tag">Animation</span>
-                            <span class="tech-tag">Engine</span>
-                        </div>
-                        <div class="project-details">
-                            <div class="detail">
-                                <span class="detail-label">Role:</span>
-                                <span class="detail-value">Programmer</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label"></span>
-                                <span class="detail-value">Solo Project</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label">Duration:</span>
-                                <span class="detail-value">3 weeks</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Get Off My Channel Project -->
-                <div class="project-card" data-project="goodbits">
-                    <div class="project-image">
-                        <img src="Images/getOff.jpg" alt="Get Off My Channel Visual Novel">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://goodbits.itch.io/get-off-my-channel" class="project-link"
-                                    target="_blank">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"
-                                            stroke="currentColor" stroke-width="2" />
-                                    </svg>
-                                    itch.io
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">GoodBits 2024</div>
-                        <h3 class="project-title">Get Off My Channel!</h3>
-                        <p class="project-description">An interactive visual novel exploring the streaming world through
-                            engaging storytelling and character development. Built with Python and the Ren'Py engine for
-                            immersive narrative experiences.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Ren'Py Engine</span>
-                            <span class="tech-tag">Visual Novel</span>
-                            <span class="tech-tag">Storytelling</span>
-                        </div>
-                        <div class="project-details">
-                            <div class="detail">
-                                <span class="detail-label">Role:</span>
-                                <span class="detail-value">Programmer & Artist</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label">Team Size:</span>
-                                <span class="detail-value">18 members</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label">Duration:</span>
-                                <span class="detail-value">3 weeks</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Library Website Project -->
-                <div class="project-card" data-project="impact">
-                    <div class="project-image">
-                        <img src="Images/impact1.JPG" alt="Gerber Hart Library Website">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">IMPACT Grant</div>
-                        <h3 class="project-title">Gerber/Hart Library Website</h3>
-                        <p class="project-description">Complete website redesign for the LGBTQ+ library to increase
-                            community engagement and donations. Modern, accessible design with improved user experience
-                            and content management.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">UX/UI Design</span>
-                        </div>
-                        <div class="project-details">
-                            <div class="detail">
-                                <span class="detail-label">Role:</span>
-                                <span class="detail-value">Lead Developer & Designer</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label">Team Size:</span>
-                                <span class="detail-value">5 members</span>
-                            </div>
-                            <div class="detail">
-                                <span class="detail-label">Duration:</span>
-                                <span class="detail-value">3 months</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="about__role">
+          <span class="about__role-line"></span>
+          <span class="about__role-text">Game Engine Developer</span>
         </div>
-
-    </section>
-
-
-    <!-- Interactive Roadmap Section -->
-    <section id="skills" class="section roadmap-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Development Journey</h2>
-                <div class="section-subtitle">Drag the character to explore my development process</div>
-            </div>
-
-            <div class="roadmap-container">
-                <!-- Draggable Character -->
-                <div class="roadmap-character" id="roadmapCharacter">
-                    <div class="character-avatar">
-                        <img src="Images/professional_photo.jpg" alt="HyeSeung Lee Character Avatar" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- Roadmap Path -->
-                <svg class="roadmap-path" viewBox="0 0 800 400">
-                    <path d="M100 200 Q200 100 300 200 Q400 300 500 200 Q600 100 700 200" stroke="var(--primary-orange)"
-                        stroke-width="4" fill="none" stroke-dasharray="10,5" opacity="0.6" />
-                </svg>
-
-                <!-- Stage Circles -->
-                <div class="roadmap-stages">
-                    <div class="roadmap-stage concept-stage" data-stage="concept">
-                        <div class="stage-circle">
-                            <span class="stage-label">Concept</span>
-                        </div>
-                    </div>
-
-                    <div class="roadmap-stage" data-stage="design">
-                        <div class="stage-circle">
-                            <span class="stage-label">Design</span>
-                        </div>
-                    </div>
-
-                    <div class="roadmap-stage" data-stage="code">
-                        <div class="stage-circle">
-                            <span class="stage-label">Code</span>
-                        </div>
-                    </div>
-
-                    <div class="roadmap-stage" data-stage="test">
-                        <div class="stage-circle">
-                            <span class="stage-label">Test</span>
-                        </div>
-                    </div>
-
-                    <div class="roadmap-stage" data-stage="deploy">
-                        <div class="stage-circle">
-                            <span class="stage-label">Deploy</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Stage Details (Hidden by default) -->
-                <div class="stage-details" id="stageDetails">
-                    <div class="details-content">
-                        <button class="details-close" id="detailsClose">&times;</button>
-                        <div class="details-header">
-                            <h3 class="details-title" id="detailsTitle">Stage Title</h3>
-                            <p class="details-description" id="detailsDescription">Stage description</p>
-                        </div>
-                        <div class="details-body">
-                            <div class="details-technologies">
-                                <h4>Tools & Technologies</h4>
-                                <div class="tech-list" id="techList"></div>
-                            </div>
-                            <div class="details-examples">
-                                <h4>Real Examples</h4>
-                                <div class="example-list" id="exampleList"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Instructions -->
-            <div class="roadmap-instructions">
-                <p>🎮 <strong>Interactive Experience:</strong> Drag the character to different stages to discover my
-                    development process!</p>
-            </div>
-
-            <!-- Impact Stats -->
-            <div class="workflow-impact">
-                <div class="impact-title">Real Impact</div>
-                <div class="impact-stats">
-                    <div class="impact-stat">
-                        <div class="impact-number">4</div>
-                        <div class="impact-label">Major Projects</div>
-                    </div>
-                    <div class="impact-stat">
-                        <div class="impact-number">35+</div>
-                        <div class="impact-label">Team Members Collaborated</div>
-                    </div>
-                    <div class="impact-stat">
-                        <div class="impact-number">1000s</div>
-                        <div class="impact-label">Users Impacted</div>
-                    </div>
-                </div>
-            </div>
+        <div class="about__role">
+          <span class="about__role-line"></span>
+          <span class="about__role-text">Product Manager</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Work Together</h2>
-                <div class="section-subtitle">Ready to bring your next project to life?</div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>leehs.codes@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" />
-                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p><a href="http://www.linkedin.com/in/leehscodes" target="_blank">Connect with me</a></p>
-                        </div>
-                    </div>
-                    <div class="availability-status">
-                        <div class="status-indicator"></div>
-                        <span>Available for new opportunities</span>
-                    </div>
-                </div>
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit-btn">
-                            <span class="btn-text">Send Message</span>
-                            <div class="btn-loader"></div>
-                        </button>
-                    </form>
-                </div>
-            </div>
+  <!-- ======= EXPERIENCE SECTION ======= -->
+  <section class="experience">
+    <div class="experience__label-bar">
+      <span class="experience__label-left">EXPERIENCE 工作经历</span>
+      <!--<span class="experience__label-center">(WORK — 05)</span>-->
+      <span class="experience__label-right">The formal stuff..</span>
+    </div>
+
+    <div class="experience__hero">
+      <h2 class="experience__heading">Overview</h2>
+      <div class="experience__hero-img">
+        <img src="assets/2389.jpg" alt="Presentation" />
+      </div>
+    </div>
+
+    <div class="experience__tabs">
+      <span class="experience__tab active" data-tab="companies">Companies</span>
+      <span class="experience__tab" data-tab="creative-collabs">Collabs</span>
+      <span class="experience__tab" data-tab="studios">Game Jams</span>
+      <span class="experience__tab" data-tab="hackathons">Hackathons</span>
+    </div>
+
+    <div class="experience__tables">
+      <!-- Companies -->
+      <div class="experience__table active" data-tab="companies">
+        <div class="experience__row">
+          <span class="experience__company">2389 Research</span>
+          <span class="experience__years">Jun 2025 – Sep 2025</span>
+          <span class="experience__role">Software Engineer</span>
+          <span class="experience__location">Chicago, IL</span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 HyeSeung Lee. All rights reserved.</p>
-                    <p>Built with passion and lots of coffee ☕</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#hero">Back to Top</a>
-                </div>
-            </div>
+        <div class="experience__row">
+          <span class="experience__company">DePaul University</span>
+          <span class="experience__years">Sep 2025 – Present</span>
+          <span class="experience__role">Programmer (Graduate Assistant)</span>
+          <span class="experience__location">Chicago, IL</span>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Collabs -->
+      <div class="experience__table" data-tab="creative-collabs">
+        <div class="experience__row">
+          <span class="experience__company">C++ Game Engine</span>
+          <span class="experience__years">Jan 2026 - Present</span>
+          <span class="experience__role">Backend Engineer</span>
+          <span class="experience__location">Hybrid (Cambridge, MA / Remote)</span>
+        </div>
+      </div>
+
+      <!-- Game Jams -->
+      <div class="experience__table" data-tab="studios">
+        <div class="experience__row">
+          <span class="experience__company">IndieCade Climate Jam</span>
+          <span class="experience__years">Jul 2024 – Jun 2025</span>
+          <span class="experience__role">Product Manager / Programmer</span>
+          <span class="experience__location">Remote</span>
+        </div>
+      </div>
+
+      <!-- Hackathons -->
+      <div class="experience__table" data-tab="hackathons">
+        <div class="experience__row">
+          <span class="experience__company">Reality Hack at MIT (AR/VR)</span>
+          <span class="experience__years">Jan 2026</span>
+          <span class="experience__role">Developer</span>
+          <span class="experience__location">Cambridge, MA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SKILLS ======= -->
+  <section class="skills">
+    <div class="skills__grid">
+      <div class="skills__item">C++</div>
+      <div class="skills__item">C#</div>
+      <div class="skills__item">Python</div>
+      <div class="skills__item">Git</div>
+      <div class="skills__item">Perforce</div>
+      <div class="skills__item">VS Code</div>
+    </div>
+  </section>
+
+  <!-- ======= PROJECTS ======= -->
+  <section id="work" class="works">
+    <div class="works__label-bar">
+      <span class="works__label-left">PROJECTS 프로젝트</span>
+      <!--<span class="works__label-center">(WDX# — 03)</span>-->
+      <span class="works__label-right">THE FUN STUFF!!</span>
+    </div>
+
+    <div class="works__hero">
+      <h2 class="works__heading">Featured projects</h2>
+    </div>
+
+    <div class="works__intro">
+      <p>
+        Each project is a piece that reflects my technical exploration and creative expression. Built with<strong> structure, intent, and scalability</strong>.
+      </p>
+      <a href="#work" class="btn btn--outline">SEE WORKS</a>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="works__grid">
+      <a href="projects/IndieCade.html" class="works__card">
+        <div class="works__card-img">
+          <img src="assets/project_carbonbusters_1.png" alt="Carbonbusters" class="works__card-bg" />
+          <img src="assets/project_carbonbusters_2.png" alt="Carbonbusters detail" class="works__card-float" />
+        </div>
+        <div class="works__card-info">
+          <span class="works__card-title">Carbonbusters</span>
+          <span class="works__card-num">(01)</span>
+        </div>
+      </a>
+      <a href="projects/GAM585.html" class="works__card">
+        <div class="works__card-img">
+          <img src="assets/GAM585.png" alt="Animation System" class="works__card-bg" />
+        </div>
+        <div class="works__card-info">
+          <span class="works__card-title">Animation System</span>
+          <span class="works__card-num">(02)</span>
+        </div>
+      </a>
+      <a href="projects/RealityHack.html" class="works__card">
+        <div class="works__card-img">
+          <img src="assets/16.jpg" alt="Reality Hack at MIT" class="works__card-bg works__card-bg--portrait" />
+        </div>
+        <div class="works__card-info">
+          <span class="works__card-title">Reality Hack at MIT — JazzCasters</span>
+          <span class="works__card-num">(03)</span>
+        </div>
+      </a>
+      <a href="projects/2389Research.html" class="works__card">
+        <div class="works__card-img">
+          <img src="assets/pal.png" alt="2389 Research" class="works__card-bg" style="object-fit:contain;transform:scale(0.5);" />
+        </div>
+        <div class="works__card-info">
+          <span class="works__card-title">2389 Research</span>
+          <span class="works__card-num">(04)</span>
+        </div>
+      </a>
+      <a href="projects/GoodBits.html" class="works__card">
+        <div class="works__card-img">
+          <img src="assets/gf_happy_cropped.png" alt="Get Off My Channel!" class="works__card-bg works__card-bg--portrait" />
+        </div>
+        <div class="works__card-info">
+          <span class="works__card-title">Get Off My Channel!</span>
+          <span class="works__card-num">(05)</span>
+        </div>
+      </a>
+      <a href="projects/Impact.html" class="works__card">
+        <div class="works__card-img">
+          <img src="assets/impact1.JPG" alt="Gerber/Hart Library" class="works__card-bg" />
+          <img src="assets/impact2.JPG" alt="Gerber/Hart Library detail" class="works__card-float" />
+        </div>
+        <div class="works__card-info">
+          <span class="works__card-title">Gerber/Hart Library</span>
+          <span class="works__card-num">(06)</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer id="contact" class="footer">
+    <div class="footer__tags">
+      <span class="footer__tag">Independent</span>
+      <span class="footer__tag">Overview</span>
+      <span class="footer__tag">Multidisciplinary</span>
+      <span class="footer__tag">Focused</span>
+    </div>
+
+    <div class="footer__body">
+      <p class="footer__desc">I build performance-driven software and games by designing clear, structured architectures upfront, then refining them through iterative feedback, debugging, and real-world testing.</p>
+      <a href="contact.html" class="btn btn--outline">GET IN TOUCH</a>
+      <a href="#home" class="btn btn--outline footer__back-top">BACK TO TOP</a>
+    </div>
+
+    <div class="footer__links-row">
+      <div class="footer__links-group">
+        <span class="footer__links-label">Quick Links</span>
+        <div class="footer__links-list">
+          <a href="#home">Home</a>,
+          <a href="#work">Projects</a>,
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer__links-group footer__links-group--right">
+        <span class="footer__links-label">Networks</span>
+        <div class="footer__links-list">
+          <a href="https://www.linkedin.com/in/leehscodes/" target="_blank">LinkedIn</a>,
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__copyright">
+      <span>2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

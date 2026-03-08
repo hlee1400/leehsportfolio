@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JazzCasters — Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__logo"><a href="../index.html" style="color:inherit">Soon</a></div>
+    <nav class="header__nav">
+      <span class="header__nav-label">Quick Links</span>
+      <div class="header__nav-links">
+        <a href="../index.html#home">Home</a>,
+        <a href="../index.html#work">Work</a>,
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="header__location">
+      <span class="header__location-city">Based in Chicago 芝加哥</span>
+      <span class="header__location-role">Creative Tech Dev</span>
+    </div>
+  </header>
+
+  <!-- Floating Project Title -->
+  <div class="project-float-title" id="floatTitle">
+    <span class="project-float-title__text" id="floatText">JazzCasters</span>
+  </div>
+
+  <!-- Project Name Marquee -->
+  <div class="project-marquee">
+    <div class="project-marquee__track">
+      <span>JazzCasters / JazzCasters&nbsp;&nbsp;&nbsp;JazzCasters / JazzCasters&nbsp;&nbsp;&nbsp;</span>
+      <span>JazzCasters / JazzCasters&nbsp;&nbsp;&nbsp;JazzCasters / JazzCasters&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Project Hero -->
+  <div class="project-hero">
+    <div class="project-hero__meta">
+      <p class="project-hero__date">Game Jam Project</p>
+      <p class="project-hero__desc">An interactive music-driven spellcasting tower-defense game where players use hand gestures to compose music and combat enemies in real time.</p>
+      <div class="project-hero__details">
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Category</span>
+          <span class="project-hero__detail-value">Game Development</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Role</span>
+          <span class="project-hero__detail-value">Programmer</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Type</span>
+          <span class="project-hero__detail-value">Music-Driven Tower Defense</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="https://hlee124.itch.io/jazzcasters" target="_blank" class="btn btn--outline">PLAY ON ITCH.IO</a>
+      </div>
+    </div>
+    <div class="project-hero__image" style="display:flex;align-items:center;justify-content:center;border-radius:8px;border:1px solid var(--gray-700);min-height:260px;padding:24px;text-align:center;">
+      <p style="font-size:14px;color:var(--gray-400);max-width:420px;">Step onto the stage as the headlining musician and defend the crowd using rhythm, gesture-driven spells, and tower-based instruments.</p>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="project-section">
+    <h2 class="project-section__title">Overview</h2>
+    <div class="project-section__text">
+      <p>JazzCasters is an interactive music-driven spellcasting tower-defense game where players use hand gestures to compose music and combat enemies in real time.</p>
+      <p>The player steps onto the stage as the headlining musician, surrounded by four instrument towers ready to amplify the sound. As hostile creatures pour in, intent on killing the vibe and silencing the performance, the player must protect the party by wielding music itself as a weapon.</p>
+      <p>Spells are cast through intentional, easy-to-learn hand gestures designed to feel expressive rather than technical, making musical spellcasting feel playful and intuitive.</p>
+    </div>
+  </section>
+
+  <!-- Mechanics -->
+  <section class="project-section">
+    <h2 class="project-section__title">Core Mechanics</h2>
+    <div class="project-section__text">
+      <p>Each gesture maps to either the spawning of a musical instrument or the spawning of a power-up orb, giving players direct control over both sound and strategy.</p>
+      <p><strong>Instrument</strong><br />
+      Musical instruments define how each tower attacks. An instrument can be dragged into the slot on top of a tower, where it produces a unique sound and attack pattern. Once placed, instruments automatically attack approaching enemies using rhythm-based mechanics.</p>
+      <p><strong>Power-Up Orb</strong><br />
+      Power-up orbs modify how an instrument behaves in combat. An orb can be dragged and applied to any instrument tower, enhancing it with effects such as increased attack power or altered attack patterns. These upgrades allow players to strategically shape both the music and the flow of combat.</p>
+    </div>
+  </section>
+
+  <!-- Failure & Stakes -->
+  <section class="project-section">
+    <h2 class="project-section__title">Stakes & Flow</h2>
+    <div class="project-section__text">
+      <p>The towers and the player each have a health bar that decreases when enemies reach and attack them. If the player&rsquo;s health reaches zero, the party is over&mdash;the music stops, and the stage falls silent.</p>
+      <p>By tying game state directly to musical energy, JazzCasters keeps players in a constant loop of listening, reacting, and re-composing the battlefield through sound.</p>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section class="project-section">
+    <h2 class="project-section__title">Technologies</h2>
+    <div class="project-tech-list">
+      <span class="project-tech-tag">Unity</span>
+      <span class="project-tech-tag">C#</span>
+      <span class="project-tech-tag">Game Design</span>
+      <span class="project-tech-tag">Audio Systems</span>
+      <span class="project-tech-tag">Gesture-Based Input</span>
+    </div>
+  </section>
+
+  <!-- Video Demo -->
+  <section class="project-section">
+    <h2 class="project-section__title">Video Demo</h2>
+    <div class="project-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/bBIsS0AcwXE?si=5exEO3Og3vk7P0eh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__tags">
+      <span class="footer__tag">Independent</span>
+      <span class="footer__tag">Overview</span>
+      <span class="footer__tag">Multidisciplinary</span>
+      <span class="footer__tag">Focused</span>
+    </div>
+    <div class="footer__body">
+      <p class="footer__desc">I build performance-driven software and games by designing clear, structured architectures upfront, then refining them through iterative feedback, debugging, and real-world testing.</p>
+      <a href="#" class="btn btn--outline footer__back-top" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">BACK TO TOP</a>
+    </div>
+    <div class="footer__links-row">
+      <div class="footer__links-group">
+        <span class="footer__links-label">Quick Links</span>
+        <div class="footer__links-list">
+          <a href="../index.html#home">Home</a>,
+          <a href="../index.html#work">Projects</a>,
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer__links-group footer__links-group--right">
+        <span class="footer__links-label">Networks</span>
+        <div class="footer__links-list">
+          <a href="https://www.linkedin.com/in/leehscodes/" target="_blank">LinkedIn</a>,
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <span>2026</span>
+    </div>
+  </footer>
+
+  <script src="float-title.js"></script>
+</body>
+</html>

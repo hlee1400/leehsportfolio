@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======= HEADER / NAV ======= -->
+  <header class="header">
+    <div class="header__logo"><a href="index.html" style="color:inherit">Soon</a></div>
+    <nav class="header__nav">
+      <span class="header__nav-label">Quick Links</span>
+      <div class="header__nav-links">
+        <a href="index.html#home">Home</a>,
+        <a href="index.html#work">Work</a>,
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="header__location">
+      <span class="header__location-city">Based in Chicago 芝加哥</span>
+      <span class="header__location-role">Creative Tech Dev</span>
+    </div>
+  </header>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section class="contact">
+    <div class="contact__inner">
+      <div class="contact__left">
+        <img src="assets/professional_photo.jpg" alt="Contact" />
+      </div>
+      <div class="contact__right">
+        <div class="contact__rows">
+          <a href="#" class="contact__row">
+            <span class="contact__row-text">Office: Chicago, Illinois.</span>
+            <span class="contact__row-arrow">&#8599;</span>
+          </a>
+          <a href="https://www.linkedin.com/in/leehscodes/" target="_blank" class="contact__row">
+            <span class="contact__row-text">Connect with me on LinkedIn</span>
+            <span class="contact__row-arrow">&#8599;</span>
+          </a>
+          <a href="mailto:leehs.codes@gmail.com" class="contact__row">
+            <span class="contact__row-text">leehs.codes@gmail.com</span>
+            <span class="contact__row-arrow">&#8599;</span>
+          </a>
+        </div>
+        <div class="contact__bar">
+          <span>Remote</span>
+          <span>Open to Relocation</span>
+        </div>
+      </div>
+    </div>
+    <h2 class="contact__heading">Contact Now</h2>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="footer__tags">
+      <span class="footer__tag">Independent</span>
+      <span class="footer__tag">Overview</span>
+      <span class="footer__tag">Multidisciplinary</span>
+      <span class="footer__tag">Focused</span>
+    </div>
+
+    <div class="footer__body">
+      <p class="footer__desc">I build performance-driven software and games by designing clear, structured architectures upfront, then refining them through iterative feedback, debugging, and real-world testing.</p>
+      <a href="#" class="btn btn--outline footer__back-top" id="backToTop">BACK TO TOP</a>
+    </div>
+
+    <div class="footer__links-row">
+      <div class="footer__links-group">
+        <span class="footer__links-label">Quick Links</span>
+        <div class="footer__links-list">
+          <a href="index.html#home">Home</a>,
+          <a href="index.html#work">Projects</a>,
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer__links-group footer__links-group--right">
+        <span class="footer__links-label">Networks</span>
+        <div class="footer__links-list">
+          <a href="https://www.linkedin.com/in/leehscodes/" target="_blank">LinkedIn</a>,
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__copyright">
+      <span>2026</span>
+    </div>
+  </footer>
+
+  <script>
+    // Back to top
+    document.getElementById('backToTop').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(0, 0, 0, 0.9)';
+        header.style.backdropFilter = 'blur(10px)';
+      } else {
+        header.style.background = 'var(--black)';
+        header.style.backdropFilter = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

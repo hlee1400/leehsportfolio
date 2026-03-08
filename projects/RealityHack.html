@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reality Hack at MIT — Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__logo"><a href="../index.html" style="color:inherit">Soon</a></div>
+    <nav class="header__nav">
+      <span class="header__nav-label">Quick Links</span>
+      <div class="header__nav-links">
+        <a href="../index.html#home">Home</a>,
+        <a href="../index.html#work">Work</a>,
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="header__location">
+      <span class="header__location-city">Based in Chicago</span>
+      <span class="header__location-role">Creative Tech Dev</span>
+    </div>
+  </header>
+
+  <!-- Floating Project Title -->
+  <div class="project-float-title" id="floatTitle">
+    <span class="project-float-title__text" id="floatText">Reality Hack at MIT</span>
+  </div>
+
+  <!-- Project Name Marquee -->
+  <div class="project-marquee">
+    <div class="project-marquee__track">
+      <span>Reality Hack at MIT / Reality Hack at MIT&nbsp;&nbsp;&nbsp;Reality Hack at MIT / Reality Hack at MIT&nbsp;&nbsp;&nbsp;</span>
+      <span>Reality Hack at MIT / Reality Hack at MIT&nbsp;&nbsp;&nbsp;Reality Hack at MIT / Reality Hack at MIT&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Project Hero -->
+  <div class="project-hero">
+    <div class="project-hero__meta">
+      <p class="project-hero__date">Reality Hack, January 2025</p>
+      <p class="project-hero__desc">An intensive mixed reality hackathon at MIT where our team built JazzCasters — a music-driven spellcasting tower-defense experience on Meta Quest 3. Awarded "Best Implementation of Hand Tracking" on the Meta Quest track.</p>
+      <div class="project-hero__details">
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Category</span>
+          <span class="project-hero__detail-value">Mixed Reality / Game Dev</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Role</span>
+          <span class="project-hero__detail-value">Programmer</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Duration</span>
+          <span class="project-hero__detail-value">48 Hours</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Platform</span>
+          <span class="project-hero__detail-value">Meta Quest 3</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="https://hlee124.itch.io/jazzcasters" target="_blank" class="btn btn--outline">PLAY JAZZCASTERS</a>
+      </div>
+    </div>
+    <div class="project-hero__image" style="border-radius:8px;overflow:hidden;border:1px solid var(--gray-700);min-height:260px;display:flex;align-items:stretch;">
+      <iframe
+        src="https://www.youtube.com/embed/bBIsS0AcwXE?si=5exEO3Og3vk7P0eh"
+        title="JazzCasters gameplay demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        style="width:100%;height:100%;"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Cards Layout -->
+  <section class="project-section project-section--cards">
+    <h2 class="project-section__title">Reality Hack &amp; JazzCasters</h2>
+    <div class="cards-layout">
+      <div class="cards-hand" id="cardsHand">
+
+        <article class="card" data-card-id="overview">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <h3 class="card__title">Overview</h3>
+              <p class="card__subtitle">How the hackathon shaped the project.</p>
+              <span class="card__flip-hint">click to flip</span>
+            </div>
+            <div class="card__face card__face--back">
+              <p>Reality Hack at MIT is an intensive mixed reality hackathon co-organized by Reality Hack, Inc. and VR/AR MIT. As a Programmer, I focused on building core interaction systems for a mixed reality experience targeting the Meta Quest 3 under a rapid 48-hour prototyping schedule.</p>
+              <p>Over 48 hours of little to no sleep, our team pushed through rapid prototyping, debugging, and countless late-night problem-solving sessions, surrounded by people dreaming out loud about their projects and futures beyond the room.</p>
+              <p>This project became a reminder that I don't have to choose between structured engineering work and creative exploration. Instead, I can let both coexist—feeding into each other through mixed reality interaction design, experimentation, and collaboration.</p>
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card card--image" data-card-id="photo-1">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <img src="../assets/16.jpg" alt="Reality Hack team" />
+            </div>
+            <div class="card__face card__face--back">
+              <img src="../assets/16.jpg" alt="Reality Hack team" />
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card" data-card-id="what-i-did">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <h3 class="card__title">What I Did</h3>
+              <p class="card__subtitle">Core systems and responsibilities.</p>
+              <span class="card__flip-hint">click to flip</span>
+            </div>
+            <div class="card__face card__face--back">
+              <ul>
+                <li>Designed and implemented core mixed reality interaction systems in Unity (C#) targeting Meta Quest 3, integrating the Meta XR Core SDK and hand-tracking APIs for real-time spatial input.</li>
+                <li>Contributed via a structured source control strategy using GitHub, enabling parallel development and stable iteration within a 48-hour rapid prototyping constraint.</li>
+                <li>Delivered a fully functional mixed reality prototype within 48 hours, presented to judges and live testers on-site at MIT.</li>
+                <li>Awarded <strong>"Best Implementation of Hand Tracking"</strong> on the Meta Quest track sponsored by Meta, recognized for both technical execution and interaction design.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card card--image" data-card-id="photo-2">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <img src="../assets/12.gif" alt="Reality Hack gameplay demo" />
+            </div>
+            <div class="card__face card__face--back">
+              <img src="../assets/12.gif" alt="Reality Hack gameplay demo" />
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card" data-card-id="jazzcasters">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <h3 class="card__title">Project: JazzCasters</h3>
+              <p class="card__subtitle">The game born from Reality Hack.</p>
+              <span class="card__flip-hint">click to flip</span>
+            </div>
+            <div class="card__face card__face--back">
+              <p><strong>JazzCasters</strong> is the mixed reality game our team built during Reality Hack at MIT&mdash;an interactive music-driven spellcasting tower-defense experience where players use hand gestures to compose music and combat enemies in real time.</p>
+              <p>The player steps onto the stage as the headlining musician, surrounded by four instrument towers ready to amplify the sound. As hostile creatures pour in, intent on killing the vibe and silencing the performance, the player must protect the party by wielding music itself as a weapon.</p>
+              <p>Spells are cast through intentional, easy-to-learn hand gestures designed to feel expressive rather than technical, making musical spellcasting feel playful and intuitive.</p>
+              <div class="card__cta">
+                <a href="https://hlee124.itch.io/jazzcasters" target="_blank" class="btn btn--outline">Play JazzCasters on Itch.io</a>
+              </div>
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card" data-card-id="mechanics">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <h3 class="card__title">JazzCasters: Mechanics</h3>
+              <p class="card__subtitle">How spells, towers, and music connect.</p>
+              <span class="card__flip-hint">click to flip</span>
+            </div>
+            <div class="card__face card__face--back">
+              <p>Each gesture maps to either the spawning of a musical instrument or the spawning of a power-up orb, giving players direct control over both sound and strategy.</p>
+              <p><strong>Instrument</strong><br />
+              Musical instruments define how each tower attacks. An instrument can be dragged into the slot on top of a tower, where it produces a unique sound and attack pattern. Once placed, instruments automatically attack approaching enemies using rhythm-based mechanics.</p>
+              <p><strong>Power-Up Orb</strong><br />
+              Power-up orbs modify how an instrument behaves in combat. An orb can be dragged and applied to any instrument tower, enhancing it with effects such as increased attack power or altered attack patterns. These upgrades allow players to strategically shape both the music and the flow of combat.</p>
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card card--image" data-card-id="photo-3">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <img src="../assets/14.jpg" alt="Reality Hack at MIT" />
+            </div>
+            <div class="card__face card__face--back">
+              <img src="../assets/14.jpg" alt="Reality Hack at MIT" />
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card" data-card-id="stakes">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <h3 class="card__title">JazzCasters: Stakes</h3>
+              <p class="card__subtitle">What happens if the music stops.</p>
+              <span class="card__flip-hint">click to flip</span>
+            </div>
+            <div class="card__face card__face--back">
+              <p>The towers and the player each have a health bar that decreases when enemies reach and attack them. If the player&rsquo;s health reaches zero, the party is over&mdash;the music stops, and the stage falls silent.</p>
+              <p>By tying game state directly to musical energy, JazzCasters keeps players in a constant loop of listening, reacting, and re-composing the battlefield through sound.</p>
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card" data-card-id="reflection">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <h3 class="card__title">Reflection</h3>
+              <p class="card__subtitle">Why this hack shifted my path.</p>
+              <span class="card__flip-hint">click to flip</span>
+            </div>
+            <div class="card__face card__face--back">
+              <p>The real risk at Reality Hack wasn&rsquo;t failing a prototype—it was not moving at all. Working alongside people who cared deeply enough to stay up too late chasing half-formed ideas reminded me why I build things in the first place.</p>
+              <p>Somewhere between programming, art, late-night problem solving, and battling with Unity, I rediscovered old ambitions I&rsquo;d quietly folded away. This experience showed me that &ldquo;serious&rdquo; software work and creative practice don&rsquo;t have to compete; they can inform each other and grow together.</p>
+              <p>I&rsquo;m grateful for the mentors and collaborators who made that possible, and our team is continuing to develop the project beyond the hackathon.</p>
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card card--image" data-card-id="photo-4">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <img src="../assets/15.jpg" alt="Reality Hack development" />
+            </div>
+            <div class="card__face card__face--back">
+              <img src="../assets/15.jpg" alt="Reality Hack development" />
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+        <article class="card" data-card-id="tech">
+          <div class="card__inner">
+            <div class="card__face card__face--front">
+              <h3 class="card__title">Technologies</h3>
+              <p class="card__subtitle">Tools that powered the prototype.</p>
+              <span class="card__flip-hint">click to flip</span>
+            </div>
+            <div class="card__face card__face--back">
+              <div class="project-tech-list">
+                <span class="project-tech-tag">Unity</span>
+                <span class="project-tech-tag">C#</span>
+                <span class="project-tech-tag">Meta Quest 3</span>
+                <span class="project-tech-tag">Meta XR Core SDK</span>
+                <span class="project-tech-tag">Hand Tracking</span>
+                <span class="project-tech-tag">GitHub</span>
+                <span class="project-tech-tag">Rapid Prototyping</span>
+                <span class="project-tech-tag">Game Design</span>
+                <span class="project-tech-tag">Audio Systems</span>
+                <span class="project-tech-tag">Gesture-Based Input</span>
+              </div>
+            </div>
+          </div>
+          <div class="card__controls">
+            <button class="card__putdown" type="button">Put Down</button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="cards-table" id="cardsTable">
+        <p class="cards-table__label">Viewed cards</p>
+      </div>
+    </div>
+    <p class="cards-hint">Click a card to flip it, or put cards down on the table.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__tags">
+      <span class="footer__tag">Independent</span>
+      <span class="footer__tag">Overview</span>
+      <span class="footer__tag">Multidisciplinary</span>
+      <span class="footer__tag">Focused</span>
+    </div>
+    <div class="footer__body">
+      <p class="footer__desc">I build performance-driven software and games by designing clear, structured architectures upfront, then refining them through iterative feedback, debugging, and real-world testing.</p>
+      <a href="#" class="btn btn--outline footer__back-top" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">BACK TO TOP</a>
+    </div>
+    <div class="footer__links-row">
+      <div class="footer__links-group">
+        <span class="footer__links-label">Quick Links</span>
+        <div class="footer__links-list">
+          <a href="../index.html#home">Home</a>,
+          <a href="../index.html#work">Projects</a>,
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer__links-group footer__links-group--right">
+        <span class="footer__links-label">Networks</span>
+        <div class="footer__links-list">
+          <a href="https://www.linkedin.com/in/leehscodes/" target="_blank">LinkedIn</a>,
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <span>2026</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var hand = document.getElementById('cardsHand');
+      var table = document.getElementById('cardsTable');
+      if (!hand || !table) return;
+
+      var cards = Array.from(hand.querySelectorAll('.card'));
+      var hasDealt = false;
+
+      /* --- Deal cards when the hand scrolls into view (once) --- */
+      function dealCards() {
+        if (hasDealt) return;
+        hasDealt = true;
+        cards.forEach(function (card, i) {
+          setTimeout(function () {
+            card.classList.add('card--dealing', 'card--dealt');
+            card.addEventListener('animationend', function handler() {
+              card.classList.remove('card--dealing');
+              card.removeEventListener('animationend', handler);
+            });
+          }, 100 + i * 180);
+        });
+        setTimeout(function () {
+          refreshFan();
+        }, 100 + cards.length * 180 + 100);
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          dealCards();
+          observer.disconnect();
+        }
+      }, { threshold: 0.1 });
+      observer.observe(hand);
+
+      /* --- Recalculate --fan angles --- */
+      function refreshFan() {
+        var handCards = Array.from(hand.children).filter(function (el) {
+          return el.classList.contains('card');
+        });
+        var count = handCards.length;
+        handCards.forEach(function (c, i) {
+          var spread = Math.min(count * 5, 24);
+          var angle = -spread + (2 * spread / Math.max(count - 1, 1)) * i;
+          if (count === 1) angle = 0;
+          c.style.setProperty('--fan', angle + 'deg');
+          /* Re-apply dealt transform so the new angle takes effect */
+          if (c.classList.contains('card--dealt') && !c.classList.contains('card--dealing')) {
+            c.style.transform = '';
+          }
+        });
+      }
+
+      /* --- Pick up card from table back to hand --- */
+      function pickUp(card) {
+        card.classList.remove('card--putdown', 'card--flipped');
+        hand.appendChild(card);
+        refreshFan();
+      }
+
+      /* --- Event delegation --- */
+      function handleClick(event) {
+        var putdownBtn = event.target.closest('.card__putdown');
+        var card = event.target.closest('.card');
+        if (!card) return;
+
+        if (putdownBtn) {
+          event.stopPropagation();
+          card.classList.add('card--putdown');
+          card.classList.remove('card--flipped');
+          table.appendChild(card);
+          refreshFan();
+          return;
+        }
+
+        /* Click on card face to flip */
+        var inner = event.target.closest('.card__inner');
+        if (inner && !card.classList.contains('card--putdown')) {
+          card.classList.toggle('card--flipped');
+        }
+      }
+
+      hand.addEventListener('click', handleClick);
+
+      /* Click on table cards to pick them back up */
+      table.addEventListener('click', function (event) {
+        var card = event.target.closest('.card');
+        if (card && card.classList.contains('card--putdown')) {
+          pickUp(card);
+        }
+      });
+
+    })();
+  </script>
+
+  <script src="float-title.js"></script>
+</body>
+</html>
