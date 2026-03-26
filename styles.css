@@ -1154,10 +1154,10 @@ a.works__card {
   border-bottom: 1px solid var(--gray-700);
 }
 
-/* GPU Animation page: extend hero to right edge only */
+/* GPU Animation page: full-width meta layout */
 .gpu-animation-page .project-hero {
-  padding-left: var(--side-padding);
-  padding-right: 0;
+  display: block;
+  padding: 60px var(--side-padding);
 }
 
 .project-hero__meta {
@@ -1169,7 +1169,8 @@ a.works__card {
 
 /* GPU Animation page: metadata spans full width */
 .gpu-animation-page .project-hero__meta {
-  flex: 1 1 100%;
+  flex: none;
+  max-width: 100%;
 }
 
 .project-hero__date {
