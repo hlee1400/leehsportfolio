@@ -487,8 +487,8 @@ img {
 }
 
 .about__image {
-  flex: 0 0 45%;
-  max-width: 45%;
+  flex: 0 0 22.5%;
+  max-width: 22.5%;
   position: relative;
   overflow: hidden;
 }
@@ -1154,11 +1154,22 @@ a.works__card {
   border-bottom: 1px solid var(--gray-700);
 }
 
+/* GPU Animation page: extend hero to right edge only */
+.gpu-animation-page .project-hero {
+  padding-left: var(--side-padding);
+  padding-right: 0;
+}
+
 .project-hero__meta {
   flex: 0 0 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* GPU Animation page: metadata spans full width */
+.gpu-animation-page .project-hero__meta {
+  flex: 1 1 100%;
 }
 
 .project-hero__date {
