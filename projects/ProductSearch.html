@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Search — Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__logo"><a href="../index.html" style="color:inherit">Home</a></div>
+    <nav class="header__nav">
+      <span class="header__nav-label">Quick Links</span>
+      <div class="header__nav-links">
+        <a href="../index.html#home">Home</a>,
+        <a href="../index.html#work">Work</a>,
+        <a href="../contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="header__location">
+      <span class="header__location-city">Based in Chicago 芝加哥</span>
+      <span class="header__location-role">Backend Software Engineer</span>
+    </div>
+  </header>
+
+  <!-- Floating Project Title -->
+  <div class="project-float-title" id="floatTitle">
+    <span class="project-float-title__text" id="floatText">Product Search</span>
+  </div>
+
+  <!-- Project Name Marquee -->
+  <div class="project-marquee">
+    <div class="project-marquee__track">
+      <span>Product Search / Product Search&nbsp;&nbsp;&nbsp;Product Search / Product Search&nbsp;&nbsp;&nbsp;</span>
+      <span>Product Search / Product Search&nbsp;&nbsp;&nbsp;Product Search / Product Search&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Project Hero -->
+  <div class="project-hero">
+    <div class="project-hero__meta">
+      <p class="project-hero__date">Personal Project, 2026</p>
+      <p class="project-hero__desc">A multi-stage hybrid search engine that combines keyword search, semantic embeddings, rank fusion, and a neural reranker, with a web UI over a 423k-product catalog.</p>
+      <div class="project-hero__details">
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Category</span>
+          <span class="project-hero__detail-value">Search &amp; Machine Learning</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Role</span>
+          <span class="project-hero__detail-value">Solo Engineer</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Benchmark</span>
+          <span class="project-hero__detail-value">Amazon ESCI (8,955 queries, 1.2M products)</span>
+        </div>
+        <div class="project-hero__detail">
+          <span class="project-hero__detail-label">Catalog</span>
+          <span class="project-hero__detail-value">423k products</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/hlee1400/product-search" target="_blank" class="btn btn--outline">SOURCE CODE</a>
+      </div>
+    </div>
+    <div class="project-hero__image">
+      <img src="../assets/productSearch_ui.png" alt="Product search results page" />
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <section class="project-section">
+    <h2 class="project-section__title">Overview</h2>
+    <div class="project-section__text">
+      <p>Short shopping queries like <strong>"aeropress"</strong> or <strong>"storage bin 52qt with lid"</strong> break single-method search: keyword matching misses synonyms, while embeddings drift toward topically related but wrong items. This project builds a <strong>four-stage retrieval pipeline</strong> where each stage fixes a different failure mode.</p>
+      <p><strong>BM25</strong> handles exact brands, model numbers, and specs. <strong>Dense retrieval</strong> (sentence-transformer embeddings + FAISS) catches paraphrases and category-level intent. <strong>Reciprocal Rank Fusion</strong> merges the two candidate pools, and a <strong>cross-encoder reranker</strong> jointly reads each (query, product) pair to fix the final order.</p>
+      <p>On the Amazon ESCI benchmark the full pipeline lifts <strong>Hits@1 from 0.296 to 0.374</strong> over BM25 alone, and a <strong>Flask web UI</strong> runs the same pipeline live at about <strong>110 ms per query</strong> on a laptop GPU.</p>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="project-section">
+    <h2 class="project-section__title">Results</h2>
+    <div class="project-features-grid">
+      <div class="project-feature">
+        <h3>Hits@1: 0.296 → 0.374</h3>
+        <p>The top result is an exact match for 26% more queries than with BM25 alone, measured on 8,955 judged ESCI queries.</p>
+      </div>
+      <div class="project-feature">
+        <h3>MRR@10: 0.385 → 0.474</h3>
+        <p>Relevant products rank higher on average. The cross-encoder rerank delivered the largest single-stage gain.</p>
+      </div>
+      <div class="project-feature">
+        <h3>~110 ms per Query</h3>
+        <p>End-to-end latency for all four stages over 423k products, using exact FAISS search on an RTX 5050 laptop GPU.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Controlled Experiments</h3>
+        <p>The embedding model is a swappable component, so the MiniLM vs. BAAI bge-small comparison changed only the encoder.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="project-section">
+    <h2 class="project-section__title">Key Features</h2>
+    <div class="project-features-grid">
+      <div class="project-feature">
+        <h3>Hybrid Retrieval</h3>
+        <p>BM25 and dense retrieval each pull 50 candidates, merged with Reciprocal Rank Fusion because their failure modes barely overlap.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Neural Reranking</h3>
+        <p>A cross-encoder scores each (query, title) pair jointly, demoting look-alikes such as "AeroPress Movie" below actual coffee makers.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Stage-by-Stage Search UI</h3>
+        <p>Switch between BM25, dense, RRF, and the full pipeline on the same query, with per-stage latency and badges showing which retriever found each result.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Pipeline Tracing</h3>
+        <p>Each product's detail panel shows its rank at every stage, making it easy to see how fusion and reranking changed the order.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section class="project-section">
+    <h2 class="project-section__title">Technologies</h2>
+    <div class="project-tech-list">
+      <span class="project-tech-tag">Python</span>
+      <span class="project-tech-tag">PyTorch</span>
+      <span class="project-tech-tag">Sentence Transformers</span>
+      <span class="project-tech-tag">FAISS</span>
+      <span class="project-tech-tag">BM25 (bm25s)</span>
+      <span class="project-tech-tag">Cross-Encoders</span>
+      <span class="project-tech-tag">Pandas</span>
+      <span class="project-tech-tag">Flask</span>
+      <span class="project-tech-tag">JavaScript</span>
+      <span class="project-tech-tag">CUDA</span>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="project-section">
+    <h2 class="project-section__title">Gallery</h2>
+    <div class="project-gallery-grid">
+      <div style="align-self:start">
+        <img src="../assets/productSearch_ui.png" alt="Search results for mid century coffee table" />
+        <p class="gallery-caption">Search UI with per-stage latency, store filters, and retrieval badges</p>
+      </div>
+      <div style="align-self:start">
+        <img src="../assets/productSearch_arch.png" alt="Retrieval pipeline architecture" />
+        <p class="gallery-caption">Pipeline: BM25 + dense retrieval → RRF → cross-encoder rerank</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Works -->
+  <section class="more-works">
+    <div class="more-works__label-bar">
+      <span>MORE PROJECTS</span>
+      <span>EXPLORE</span>
+    </div>
+    <div class="more-works__marquee">
+      <div class="more-works__marquee-track">
+        <span>More Works&nbsp;&nbsp;&nbsp;More Works&nbsp;&nbsp;&nbsp;More Works&nbsp;&nbsp;&nbsp;More Works&nbsp;&nbsp;&nbsp;</span>
+        <span>More Works&nbsp;&nbsp;&nbsp;More Works&nbsp;&nbsp;&nbsp;More Works&nbsp;&nbsp;&nbsp;More Works&nbsp;&nbsp;&nbsp;</span>
+      </div>
+    </div>
+    <div class="more-works__grid">
+      <a href="GPUAnimation.html" class="more-works__card">
+        <div class="more-works__card-img">
+          <img src="../assets/GPUAnimation.png" alt="GPU Animation" />
+        </div>
+        <div class="more-works__card-info">
+          <span class="more-works__card-title">GPU Animation</span>
+          <span class="more-works__card-num">(01)</span>
+        </div>
+      </a>
+      <a href="2389Research.html" class="more-works__card">
+        <div class="more-works__card-img">
+          <img src="../assets/pal.png" alt="2389 Research" style="object-fit:contain;transform:scale(0.5);" />
+        </div>
+        <div class="more-works__card-info">
+          <span class="more-works__card-title">2389 Research</span>
+          <span class="more-works__card-num">(02)</span>
+        </div>
+      </a>
+      <a href="IndieCade.html" class="more-works__card">
+        <div class="more-works__card-img">
+          <img src="../assets/project_carbonbusters_1.png" alt="Carbonbusters" />
+        </div>
+        <div class="more-works__card-info">
+          <span class="more-works__card-title">Carbonbusters</span>
+          <span class="more-works__card-num">(03)</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__tags">
+      <span class="footer__tag">Independent</span>
+      <span class="footer__tag">Overview</span>
+      <span class="footer__tag">Multidisciplinary</span>
+      <span class="footer__tag">Focused</span>
+    </div>
+    <div class="footer__body">
+      <p class="footer__desc">I build performance-driven software and games by designing clear, structured architectures upfront, then refining them through iterative feedback, debugging, and real-world testing.</p>
+      <a href="#" class="btn btn--outline footer__back-top" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">BACK TO TOP</a>
+    </div>
+    <div class="footer__links-row">
+      <div class="footer__links-group">
+        <span class="footer__links-label">Quick Links</span>
+        <div class="footer__links-list">
+          <a href="../index.html#home">Home</a>,
+          <a href="../index.html#work">Projects</a>,
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer__links-group footer__links-group--right">
+        <span class="footer__links-label">Networks</span>
+        <div class="footer__links-list">
+          <a href="https://www.linkedin.com/in/leehscodes/" target="_blank">LinkedIn</a>,
+          <a href="https://github.com/hlee1400" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <span>2026</span>
+    </div>
+  </footer>
+
+  <script src="float-title.js"></script>
+
+</body>
+</html>
