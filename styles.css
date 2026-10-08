@@ -1376,6 +1376,15 @@ a.works__card {
   margin-top: 10px;
 }
 
+/* Self-hosted demo video */
+.project-demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #000;
+}
+
 /* Video Embed */
 .project-video {
   position: relative;
