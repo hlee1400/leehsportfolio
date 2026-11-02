@@ -45,7 +45,7 @@
   <div class="project-hero">
     <div class="project-hero__meta">
       <p class="project-hero__date">Personal Project, 2026</p>
-      <p class="project-hero__desc">A multi-stage hybrid search engine that combines keyword search, semantic embeddings, rank fusion, and a neural reranker, with a web UI over a 423k-product catalog.</p>
+      <p class="project-hero__desc">A multi-stage hybrid search engine over a 423k-product catalog, extended with search by text or photo over 23.8k product images. Every design choice is backed by an offline eval, and the image search is deployed as an API on Fly.io.</p>
       <div class="project-hero__details">
         <div class="project-hero__detail">
           <span class="project-hero__detail-label">Category</span>
@@ -56,17 +56,16 @@
           <span class="project-hero__detail-value">Solo Engineer</span>
         </div>
         <div class="project-hero__detail">
-          <span class="project-hero__detail-label">Benchmark</span>
-          <span class="project-hero__detail-value">Amazon ESCI (8,955 queries, 1.2M products)</span>
+          <span class="project-hero__detail-label">Benchmarks</span>
+          <span class="project-hero__detail-value">Amazon ESCI (8,955 queries) + 2,000 LLM-written shopper queries</span>
         </div>
         <div class="project-hero__detail">
           <span class="project-hero__detail-label">Catalog</span>
-          <span class="project-hero__detail-value">423k products</span>
+          <span class="project-hero__detail-value">423k products (23.8k with photos)</span>
         </div>
       </div>
       <div class="project-actions">
         <a href="https://github.com/hlee1400/product-search" target="_blank" class="btn btn--outline">SOURCE CODE</a>
-        <a href="https://hlee-product-search.fly.dev" target="_blank" class="btn btn--outline">LIVE SITE</a>
       </div>
     </div>
     <div class="project-hero__image">
@@ -74,22 +73,58 @@
     </div>
   </div>
 
-  <!-- Live Demo -->
-  <section class="project-section">
-    <h2 class="project-section__title">Live Demo</h2>
-    <video class="project-demo-video" src="../assets/productSearch_demo.mp4"
-      poster="../assets/productSearch_demo_poster.jpg" controls muted playsinline preload="metadata"
-      aria-label="Demo of the hosted product search: text search, color and category filters, more like this, photo search and comparing search methods"></video>
-    <p class="gallery-caption">Recorded on the live deployment: search 23,807 products by description or photo, filter by AI-labeled color and Google product category, and find visually similar items. SigLIP 2 + MiniLM, served by FastAPI on Fly.io.</p>
-  </section>
-
   <!-- Overview -->
   <section class="project-section">
     <h2 class="project-section__title">Overview</h2>
     <div class="project-section__text">
-      <p>Short shopping queries like <strong>"aeropress"</strong> or <strong>"storage bin 52qt with lid"</strong> break single-method search: keyword matching misses synonyms, while embeddings drift toward topically related but wrong items. This project builds a <strong>four-stage retrieval pipeline</strong> where each stage fixes a different failure mode.</p>
-      <p><strong>BM25</strong> handles exact brands, model numbers, and specs. <strong>Dense retrieval</strong> (sentence-transformer embeddings + FAISS) catches paraphrases and category-level intent. <strong>Reciprocal Rank Fusion</strong> merges the two candidate pools, and a <strong>cross-encoder reranker</strong> jointly reads each (query, product) pair to fix the final order.</p>
-      <p>On the Amazon ESCI benchmark the full pipeline lifts <strong>Hits@1 from 0.296 to 0.374</strong> over BM25 alone, and a <strong>Flask web UI</strong> runs the same pipeline live at about <strong>110 ms per query</strong> on a laptop GPU.</p>
+      <p>A <strong>four-stage text search pipeline</strong>: <strong>BM25</strong> for exact brands and specs, <strong>dense retrieval</strong> for paraphrases, <strong>rank fusion</strong> to merge them, and a <strong>cross-encoder</strong> to rerank. On Amazon ESCI it lifts <strong>Hits@1 from 0.296 to 0.374</strong> over BM25 alone.</p>
+      <p><strong>Image search</strong> adds search by description, by uploaded photo, or by <strong>"more like this"</strong>, using SigLIP 2 photo matches blended with MiniLM title matches. Vision-labeled <strong>color and category</strong> filters cover all 23.8k products.</p>
+      <p><strong>Evals</strong> on 2,000+ LLM-written shopper queries drove the design: equal-weight fusion collapsed on queries that describe the photo, and a <strong>70/30 score blend</strong> raised MRR@10 from <strong>0.527 to 0.624</strong>. It runs as a <strong>FastAPI service on Fly.io</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="project-section">
+    <h2 class="project-section__title">Demo</h2>
+    <video class="project-demo-video" src="../assets/productSearch_demo.mp4" poster="../assets/productSearch_demo_poster.jpg" controls muted playsinline preload="metadata"></video>
+    <p class="gallery-caption">The hosted image search: text search, color and category filters, "more like this", search with an uploaded photo, and the search methods side by side</p>
+  </section>
+
+  <!-- Evals -->
+  <section class="project-section">
+    <h2 class="project-section__title">Evals</h2>
+    <h3 class="eval-table__title">Image search: text queries by type</h3>
+    <p class="eval-table__note">MRR@10 [Recall@10] on held-out products. Queries were LLM-written from the product's brand, photo, or text, and fusion weights were tuned on the other half of the products.</p>
+    <div class="eval-table__wrap">
+      <table class="eval-table">
+        <thead>
+          <tr><th>Method</th><th>From brand</th><th>From image</th><th>From text</th><th>Mean</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Title only (MiniLM)</td><td>0.772 <span>[0.88]</span></td><td>0.162 <span>[0.29]</span></td><td>0.438 <span>[0.60]</span></td><td>0.457</td></tr>
+          <tr><td>Photo only (SigLIP 2)</td><td>0.594 <span>[0.79]</span></td><td>0.599 <span>[0.79]</span></td><td>0.457 <span>[0.69]</span></td><td>0.550</td></tr>
+          <tr><td>Equal-weight RRF (first design)</td><td>0.759 <span>[0.91]</span></td><td>0.310 <span>[0.52]</span></td><td>0.511 <span>[0.70]</span></td><td>0.527</td></tr>
+          <tr class="eval-table__best"><td>Score blend, w = 0.7 (shipped)</td><td>0.822 <span>[0.96]</span></td><td>0.495 <span>[0.70]</span></td><td>0.554 <span>[0.74]</span></td><td>0.624</td></tr>
+          <tr><td>Score blend, w = 0.8</td><td>0.781 <span>[0.94]</span></td><td>0.536 <span>[0.75]</span></td><td>0.536 <span>[0.73]</span></td><td>0.618</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="eval-table__title">Text search: Amazon ESCI</h3>
+    <p class="eval-table__note">8,955 judged queries over 1.2M products. Each row adds or swaps one stage of the pipeline.</p>
+    <div class="eval-table__wrap">
+      <table class="eval-table">
+        <thead>
+          <tr><th>Pipeline</th><th>Hits@1</th><th>Hits@5</th><th>Hits@10</th><th>MRR@10</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BM25</td><td>0.296</td><td>0.502</td><td>0.581</td><td>0.385</td></tr>
+          <tr><td>Dense (MiniLM-L6)</td><td>0.249</td><td>0.462</td><td>0.560</td><td>0.340</td></tr>
+          <tr><td>Dense (BAAI bge-small)</td><td>0.286</td><td>0.498</td><td>0.594</td><td>0.378</td></tr>
+          <tr><td>RRF (dense + BM25)</td><td>0.315</td><td>0.532</td><td>0.630</td><td>0.413</td></tr>
+          <tr class="eval-table__best"><td>RRF + cross-encoder rerank</td><td>0.374</td><td>0.612</td><td>0.685</td><td>0.474</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -104,6 +139,14 @@
       <div class="project-feature">
         <h3>MRR@10: 0.385 → 0.474</h3>
         <p>Relevant products rank higher on average. The cross-encoder rerank delivered the largest single-stage gain.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Image Search MRR@10: 0.527 → 0.624</h3>
+        <p>Blending normalized photo and title scores replaced equal-weight rank fusion. The blend no longer collapses on queries that describe the photo, and it beats both sides on brand queries.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Measured, Then Not Shipped</h3>
+        <p>Evals ruled out three plausible features: weighted rank fusion, boosting by the color named in the query, and 8-bit models, which dropped photo search MRR@10 from 0.971 to 0.087.</p>
       </div>
       <div class="project-feature">
         <h3>~110 ms per Query</h3>
@@ -136,6 +179,22 @@
         <h3>Pipeline Tracing</h3>
         <p>Each product's detail panel shows its rank at every stage, making it easy to see how fusion and reranking changed the order.</p>
       </div>
+      <div class="project-feature">
+        <h3>Search by Text or Photo</h3>
+        <p>Describe a product, drop in your own photo, or click "more like this" to search by a product's image, using SigLIP 2 embeddings blended with MiniLM title matches.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Vision-Labeled Filters</h3>
+        <p>A vision model labeled all 23.8k products with one of 16 colors and a Google-taxonomy category. A 300-product pilot showed that fixed-choice labels beat free-form ones.</p>
+      </div>
+      <div class="project-feature">
+        <h3>LLM-Written Benchmarks</h3>
+        <p>Shopper queries are generated through an LLM gateway, with one writer model so only the input varies. 1,000 requests take 2 minutes instead of over an hour on a laptop.</p>
+      </div>
+      <div class="project-feature">
+        <h3>Hosted API</h3>
+        <p>A FastAPI service on Fly.io with the models and index baked into the Docker image. Sizing torch threads to the container's CPU limit cut queries from 18 s to about 0.1 s.</p>
+      </div>
     </div>
   </section>
 
@@ -150,7 +209,12 @@
       <span class="project-tech-tag">BM25 (bm25s)</span>
       <span class="project-tech-tag">Cross-Encoders</span>
       <span class="project-tech-tag">Pandas</span>
+      <span class="project-tech-tag">SigLIP 2 / CLIP / DINOv2</span>
       <span class="project-tech-tag">Flask</span>
+      <span class="project-tech-tag">FastAPI</span>
+      <span class="project-tech-tag">Docker</span>
+      <span class="project-tech-tag">Fly.io</span>
+      <span class="project-tech-tag">Playwright</span>
       <span class="project-tech-tag">JavaScript</span>
       <span class="project-tech-tag">CUDA</span>
     </div>
